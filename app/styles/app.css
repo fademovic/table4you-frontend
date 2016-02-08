@@ -1,0 +1,55 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 30px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+  background-color: black
+}
+.header
+{
+  background-color: white
+}
+#fooPar
+{
+  color: gray
+}
+.jumbotron 
+{
+    background: url('/assets/images/jumbotron.jpg')  center center;
+    min-height: 400px
+   
+}
+.slike 
+{
+ margin: 0px 0px 0px 30px
+}
+
+.carousel .item
+{
+  height: 190px
+
+
+}
+
+#myCarousel
+{
+  margin: 40px 0px 40px 0px
+}
+
+.dnoJumbotrona
+{
+  /*zavisi od velicine jumbotrona*/
+  margin-top: 300px
+}
+
