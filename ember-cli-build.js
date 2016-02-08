@@ -11,6 +11,11 @@ module.exports = function(defaults) {
   // output files.
   app.import('bower_components/bootstrap/dist/css/bootstrap.css'); 
   app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
+  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', {
+  destDir: 'fonts'
+});
+
+
   // If you need to use different assets in different
   // environments, specify an object as the first parameter. That
   // object's keys should be the environment name and the values
