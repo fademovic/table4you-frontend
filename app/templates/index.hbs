@@ -1,3 +1,8 @@
+
+<!--ovdje primjenjujes komponentu-->
+  
+
+
 <!--Jumbotron-->
 <div class="container"> <!-- stavis jumbotron bez container klase i ide skroz do kraja.. -->
              
@@ -7,32 +12,62 @@
 <div class="row" >
 <form role="form" class="dnoJumbotrona">
 
-          <div class="col-md-1">
-          <div class="form-group">
-          <input type="number" class="form-control" id="brojLjudi">
-          </div>
-          </div>
 
           <div class="col-md-2">
           <div class="form-group">
+          <div class="row">
+          <div class="col-md-1">
+          <span class="glyphiconStyle glyphicon glyphicon-user "></span>
+          </div>
+          <div class="col-md-7">
+          <input type="number" class="form-control" id="brojLjudi">
+          </div>
+          </div>
+          </div>
+          </div>
+
+
+          <div class="col-md-3">
+          <div class="form-group">
+          <div class="row">
+          <div class="col-md-1">
+          <span class="glyphiconStyle glyphicon glyphicon-calendar"></span>
+          </div>
+          <div class="col-md-9">
           <input type="date" class="form-control" id="datum">
           </div>
           </div>
+          </div>
+          </div>
  			
- 		  <div class="col-md-2">
+ 		      <div class="col-md-2">
           <div class="form-group">
+          <div class="row">
+          <div class="col-md-2">
+          <span class="glyphiconStyle glyphicon glyphicon-time"></span>
+          </div>
+          <div class="col-md-9">
           <input type="time" class="form-control" id="vrijeme">
+          </div>
+          </div>
           </div>
           </div>
           
           <div class="col-md-3">
           <div class="form-group">
+          <div class="row">
+          <div class="col-md-1">
+          <span class="glyphiconStyle glyphicon glyphicon-cutlery"></span>
+          </div>
+          <div class="col-md-9">
             <input list="lista-restorana" class="form-control" id="listaRestorana">
             <datalist id="lista-restorana">
                <option>Restoran1</option>
                <option>Restoran2</option>
                <option>Restoran3</option>
             </datalist>
+          </div>
+          </div>
           </div>
           </div>
 
@@ -45,118 +80,16 @@
 </div>
 
 
-	<!--POPULAR-->
-<!--dodavanje carousel-a-->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-	<!--dodavanje elemenata carousel-a-->
-<div class="row">
-	     <div class="col-md-11">
-	     <label>Popular Restaruants</label>   
-	     <a href="#">See All</a>
-	     </div>
-	<!--lijeve i desne kontrole-->
-	     <div class="col-md-1">
-	     <a class="glifikon" href="#myCarousel" role="button" data-slide="prev" > 
-         <span  class="glyphicon glyphicon-chevron-left">&nbsp;</span>
-	     </a>
 
-	    
-         <a class="glifikon" href="#myCarousel" role="button" data-slide="next"> 
-         <span  class="glyphicon glyphicon-chevron-right">&nbsp;</span>
-         </a>
-         </div> 
 
-</div>    
-	
-<div class="carousel-inner" role="listbox">
+
+
 	<!--aktivni element-->
-		
-<div class="item active" >
-<div class="row">
-			<div class="imageBlokovi"class="col-md-3">
-			<a href="#" class="margineSlike" >
-			<img  src='/assets/images/popular.jpg' alt="restoran1" class="img-rounded velicinaSlike"  >
-			</a>
-			<p class="margineSlike">Restoran1</p>
-			<p  class="adresa margineSlike">Adresa</p>
-			</div>
-            
-            <div class="imageBlokovi" class="col-md-3">
-			<a href="#" class="margineSlike" >
-			<img src='/assets/images/popular.jpg' alt="restoran2"  class=" img-rounded velicinaSlike"  >
-			</a>
-			<p class="margineSlike">Restoran2</p>
-			<p  class="adresa margineSlike">Adresa</p>
-			</div>
 
-			<div class="imageBlokovi" class="col-md-3">
-			<a href="#" class="margineSlike" >
-			<img src='/assets/images/popular.jpg' alt="restoran3"  class=" img-rounded velicinaSlike"  >
-			</a>
-			<p class="margineSlike">Restoran3</p>
-			<p  class="adresa margineSlike">Adresa</p>
-			</div>
-            
-            <div class="imageBlokovi" class="col-md-3">
-            <a href="#" class="margineSlike" >
-			<img  src='/assets/images/popular.jpg' alt="restoran4"  class=" img-rounded velicinaSlike"  >
-			</a>
-			<p class="margineSlike">Restoran4</p>
-			<p  class="adresa margineSlike">Adresa</p>
-			</div>
-            
-            
-            
+       {{index-component title="Popular restaurants"}}
 
-</div>
-</div>
-		
-		<!--ostali elementi-->
-		
-<div class="item" >
-<div class="row">
-
-			<div class="imageBlokovi" class="col-md-3">
-			<a href="#" class="margineSlike" >
-			<img  src='/assets/images/new.jpg' alt="restoran1"  class=" img-rounded velicinaSlike"  >
-			</a>
-			<p class="margineSlike">Restoran1</p>
-			<p  class="adresa margineSlike">Adresa</p>
-			</div>
-            
-            <div class="imageBlokovi" class="col-md-3">
-			<a href="#" class="margineSlike" >
-			<img src='/assets/images/new.jpg' alt="restoran2"  class=" img-rounded velicinaSlike"  >
-			</a>
-			<p class="margineSlike">Restoran2</p>
-			<p  class="adresa margineSlike">Adresa</p>
-			</div>
-
-			<div class="imageBlokovi" class="col-md-3">
-			<a href="#" class="margineSlike" >
-			<img src='/assets/images/new.jpg' alt="restoran3"  class=" img-rounded velicinaSlike"  >
-			</a>
-			<p class="margineSlike">Restoran3</p>
-			<p  class="adresa margineSlike">Adresa</p>
-			</div>
-            
-            <div class="imageBlokovi" class="col-md-3">
-            <a href="#" class="margineSlike" >
-			<img  src='/assets/images/new.jpg' alt="restoran4"  class=" img-rounded velicinaSlike"  >
-			</a>
-			<p class="margineSlike">Restoran4</p>
-			<p  class="adresa margineSlike">Adresa</p>
-			</div>
-            			
-        
-
-</div>
-</div>
-
-</div>
-
-</div>
-
+       {{index-component title="New restaurants"}}
+       
 </div>
 
 

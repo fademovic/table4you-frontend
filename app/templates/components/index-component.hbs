@@ -1,0 +1,46 @@
+<!--treba mi popular Restaurant, see all i buttoni za slajd, ali da se ne prikazuju devet puta nego jednom, moze li se to uraditi..-->
+<article class="index-component">
+
+<div class="row">
+	     <div class="col-md-11 col-xs-10">
+	     <label>{{title}}</label>   
+	     <a href="#">See All</a>
+	     </div>
+	<!--lijeve i desne kontrole-->
+<div class="col-md-1 col-xs-2">
+	     
+	 
+<a  class="glyphicon glyphicon-chevron-left" role="button" {{action 'leftSlide'}}> </a> 
+            <a  class="glyphicon glyphicon-chevron-right" role="button" {{action 'rightSlide'}}></a> 
+
+</div> 
+
+</div> 
+
+<div class="row horizontalSlider" > 
+
+   {{#each restaurants as |singleRestaurant| }}
+   <div class="celija">
+            {{#link-to "restaurants" singleRestaurant.restaurantId }}
+			<img src={{singleRestaurant.image}} alt="restoran" class="img-rounded velicinaSlike" />
+			{{/link-to}}
+		  
+			<p  class="ime">{{singleRestaurant.name}}</p>
+			<p  class="adresa">{{singleRestaurant.streetName}}</p>
+			
+			<div class="rating">
+            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+            </div>
+    </div>
+    {{/each}}
+
+</div>     
+
+
+
+</article>
+
+           
+
+
+{{yield}}

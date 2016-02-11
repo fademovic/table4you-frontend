@@ -6,8 +6,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-	this.route('login');
-	this.route('registration');
+	//dinamicka ruta, koja zavisi od IDa restotrana
+	this.route('restaurants',{ path: 'restaurants/:restaurantId' });
 });
 
 export default Router;

@@ -2,6 +2,134 @@ export default function() {
 
   // These comments are here to help you get started. Feel free to delete them.
 
+  this.get('/restaurants', function() {
+    return [
+    {
+      restaurantId:1 ,
+      name: 'Restoran1',
+      streetName: 'Adresa1',
+      city: 'Grad1',
+      country: 'Drzava1',
+      image:'/assets/images/popular.jpg'
+    }, 
+    {
+      restaurantId:2,
+      name: 'Restoran2',
+      streetName: 'Adresa2',
+      city: 'Grad2',
+      country: 'Drzava2',
+      image:'/assets/images/new.jpg'
+    }, 
+    {
+      restaurantId:3, 
+      name: 'Restoran3',
+      streetName: 'Adresa3',
+      city: 'Grad3',
+      country: 'Drzava3',
+      image:'/assets/images/jumbotron.jpg'
+    },
+    {
+      restaurantId:4 ,
+      name: 'Restoran4',
+      streetName: 'Adresa4',
+      city: 'Grad4',
+      country: 'Drzava4',
+      image:'/assets/images/popular.jpg'
+    },
+    {
+      restaurantId:5 ,
+      name: 'Restoran5',
+      streetName: 'Adresa5',
+      city: 'Grad5',
+      country: 'Drzava5',
+      image:'/assets/images/new.jpg'
+    },
+    {
+      restaurantId:6 ,
+      name: 'Restoran6',
+      streetName: 'Adresa6',
+      city: 'Grad6',
+      country: 'Drzava6',
+      image:'/assets/images/jumbotron.jpg'
+    },
+    {
+      restaurantId:7 ,
+      name: 'Restoran7',
+      streetName: 'Adresa7',
+      city: 'Grad7',
+      country: 'Drzava7',
+      image:'/assets/images/popular.jpg'
+    },
+    {
+      restaurantId:8 ,
+      name: 'Restoran8',
+      streetName: 'Adresa8',
+      city: 'Grad8',
+      country: 'Drzava8',
+      image:'/assets/images/new.jpg'
+    },
+    {
+      restaurantId:9 ,
+      name: 'Restoran9',
+      streetName: 'Adresa9',
+      city: 'Grad9',
+      country: 'Drzava9',
+      image:'/assets/images/jumbotron.jpg'
+    }
+    ];
+  });
+
+
+  this.get('/restaurants/1', function() {
+    return {
+      restaurantId:1, 
+      name: 'Restoran1',
+      streetName: 'Adresa1',
+      city: 'Grad1',
+      country: 'Drzava1', 
+      image:'/assets/images/popular.jpg'
+    };
+  });
+
+    this.get('/restaurants/2', function() {
+    return {
+      restaurantId:2, 
+      name: 'Restoran2',
+      streetName: 'Adresa2',
+      city: 'Grad2',
+      country: 'Drzava2', 
+      image:'/assets/images/new.jpg'
+    };
+  });
+
+  this.get('/restaurants/3', function() {
+    return {
+      restaurantId:3, 
+      name: 'Restoran3',
+      streetName: 'Adresa3',
+      city: 'Grad3',
+      country: 'Drzava3', 
+      image:'/assets/images/jumbotron.jpg'
+    };
+  });
+
+  this.get('/restaurants/4', function() {
+    return {
+       restaurantId:4, 
+      name: 'Restoran4',
+      streetName: 'Adresa4',
+      city: 'Grad4',
+      country: 'Drzava4', 
+      image:'/assets/images/popular.jpg'
+    };
+  });
+
+
+
+
+
+
+
   /*
     Config (with defaults).
 
@@ -102,6 +230,11 @@ export default function() {
     });
 
   */
+
+  
+
+
+
 }
 
 /*
