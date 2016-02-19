@@ -1,157 +1,36 @@
     <!--Header -->
 <header class="header">
-<div class="container">
+ <div class="container">
 	<!--naslov -->
-	<div class="navbar-brand">Table4You</div>  
-    	    <div align="right" class="navbar-btn">
-               <a href="#" class="btn btn-success" data-toggle="modal" data-target="#signUpModal">SignUp</a>
-                <a href="#" data-toggle="modal" data-target="#loginModal">Login</a>
-            </div>  
+  <div class="navbar-brand">Table4You</div>  
+<div align="right" class="navbar-btn">
+  
+   {{#unless userService.currentUser}}
+    <a href="#" id="signUp" class="btn btn-success" data-toggle="modal" data-target="#signUpModal">SignUp</a>
+   <a href="#" id="login" data-toggle="modal" data-target="#loginModal" >Login</a>
+   <p id="test1"></p>
 
-</div>
+    {{else}}
+    {{userService.currentUser.firstName}}  <a href="" {{action 'logout'}}>Logout</a>
+    {{/unless}}
+
+  </div>  
+
+ 	    
+
+ </div>
 </header>
-
-
-<!-- Modal za signup -->
-<div id="signUpModal" class="modal fade" role="dialog">
- <!-- velicina modala-->
- <div class="modal-dialog modal-md">
-<!-- Sadrzaj Modala -->
-<div class="modal-content">
- <!--Zaglavlje-->
- <!--Xic za zatvaranje-->
- <div class="modal-header" >
-  <button type="button" class="close" data-dismiss="modal">&times;</button>
-  <p>Table4YouLogo</p>    
- </div>
- <!--Tijelo -->
-<div class="modal-body">
-    <!--forma-->
-    <form role="form">
-        
-        <!--first name-->
-        <div class="form-group" class="col-md-6">
-            <input type="text" class="form-control" id="firstName" placeholder="First name">
-        </div>
-
-        <!--last name-->
-        <div class="form-group" class="col-md-6">
-            <input type="text" class="form-control" id="lastName" placeholder="Last name">
-        </div>
-
-        <p>&nbsp;</p>
-
-        <!--email-->
-        <div class="form-group" class="col-md-12">
-            <input type="email" class="form-control" id="email" placeholder="Email">
-        </div>
-
-        <p>&nbsp;</p>
-
-        <!--pass-->
-        <div class="form-group" class="col-md-12">
-            <input type="password" class="form-control" id="pwd" placeholder="Password">
-        </div>
-
-        <p>&nbsp;</p>
-
-        <!--passConfirmation-->
-        <div class="form-group" class="col-md-12">
-            <input type="password" class="form-control" id="pwdConfirmation" placeholder="Password confirmation">
-        </div>
-
-        <p>&nbsp;</p>
-        
-        <!--city-->
-        <div class="form-group" class="col-md-6">
-            <input type="text" class="form-control" id="city" placeholder="City">
-        </div>
-
-
-        <!--country-->
-        <div class="form-group" class="col-md-6">
-            <input  type="text" class="form-control" id="country" placeholder="Country">
-        </div>
-
-
-
-        <p>&nbsp;</p>
-        
-    </form> 
-
- </div>   
- 
-        <!--footer-->
-<div class="modal-footer" >
-        <!--white space-->         
-        
-        <div class="col-md-12">           
-        <a href="#" class="btn btn-success btn-block">Create account</a>
-        </div>
-</div>
-
-</div>
-    
-</div>
-
-</div>
-
-<!-- Modal za login -->
-<div id="loginModal" class="modal fade" role="dialog">
-<!-- velicina modala-->
-<div class="modal-dialog modal-sm">
-<!-- Sadrzaj Modala -->
-<div class="modal-content">
- <!--Zaglavlje-->
- <div class="modal-header">
-  <!--Xic za zatvaranje-->
-  <button type="button" class="close" data-dismiss="modal">&times;</button>
-  <p>Table4YouLogo</p>    
- </div>
- <!--Tijelo -->
- <div class="modal-body">
-    <!--forma-->
-    <form role="form">
-        <!--username-->
-        <div class="form-group">
-            <input type="email" class="form-control" id="email" placeholder="Email">
-        </div>
-
-        <!--pass-->
-        <div class="form-group">
-            <input type="password" class="form-control" id="pwd" placeholder="Password">
-        </div>
-
-    </form> 
- </div>
-        <!--footer-->
-<div class="modal-footer">
-    
-        
-        <div class="col-md-12"> 
-        <a href="#" class="btn btn-success btn-block" >Login</a>
-        </div>
-        <div class="col-md-10">
-        <a href="#" >Forgot your password?</a>
-        </div>
-        
-</div>
-
-</div>
-    
-</div>
-
-</div>
 
 
 <!--footer -->
 <footer class="footer">
-    <div class="container">
-       <p class="fooPar">Copyright info <a href="#" class="fooPar">Link negdje</a> </p> 
-    </div>
+ <div class="container">
+  <p class="fooPar">Copyright info <a href="#" class="fooPar">Link negdje</a> </p> 
+ </div>
 </footer>
-
- 
 
 
 {{outlet}}
+
+
+{{login-component}}

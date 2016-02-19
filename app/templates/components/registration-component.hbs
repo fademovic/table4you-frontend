@@ -1,0 +1,117 @@
+<!-- Modal za signup -->
+<div id="signUpModal" class="modal fade" role="dialog">
+ <!-- velicina modala-->
+ <div class="modal-dialog modal-md">
+<!-- Sadrzaj Modala -->
+  <div class="modal-content">
+ <!--Zaglavlje-->
+ <!--Xic za zatvaranje-->
+   <div class="modal-header" >
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <p>Table4YouLogo</p>    
+   </div>
+ <!--Tijelo -->
+   <div class="modal-body">
+    <div class="row">
+    <!--forma-->
+     <form role="form">
+       
+        <!--first name-->
+      <div class="form-group" class="col-md-6">
+       {{input type="text" class="form-control" value=firstName placeholder="First name"}}
+      </div>
+
+        <!--last name-->
+      <div class="form-group" class="col-md-6">
+       {{input type="text" class="form-control" value=lastName placeholder="Last name"}}
+      </div><p>&nbsp;</p>
+
+        <!--email-->
+      <div class="form-group" class="col-md-12">
+       {{input type="email" class="form-control" value=emailReg placeholder="Email"}}
+      </div><p>&nbsp;</p>
+
+      <div class="form-group" class="col-md-8">
+       {{input type="tel" class="form-control" value=tel placeholder="Phone"}}
+      </div><p>&nbsp;</p><p>&nbsp;</p>
+
+        <!--pass-->
+      <div class="form-group" class="col-md-12">
+       {{input type="password" class="form-control" value=pwdReg placeholder="Password"}}
+      </div><p>&nbsp;</p>
+
+        <!--passConfirmation-->
+      <div class="form-group" class="col-md-12">
+       {{input type="password" class="form-control" value=pwdConfirmation placeholder="Password confirmation"}}
+      </div><p>&nbsp;</p>
+        
+        <!--city-->
+      <div class="form-group" class="col-md-6">
+       {{input type="text" class="form-control" value=city placeholder="City"}}
+      </div>
+
+        <!--country-->
+      <div class="form-group" class="col-md-6">
+       {{input  type="text" class="form-control" value=country placeholder="Country"}}
+      </div><p>&nbsp;</p>
+
+      <div class="form-group" class="col-md-8">
+       {{input  type="text" class="form-control" value=streetName placeholder="Street name"}}
+      </div><p>&nbsp;</p><p>&nbsp;</p>
+
+      <div class="form-group" class="col-md-8">
+       <input type="radio" name="gender" value="male" checked> Male
+       <input type="radio" name="gender" value="female"> Female
+      </div><p>&nbsp;</p>
+     
+     <!--u miragu definisi-->
+    <p class="col-md-10">Birthday:</p>
+    <div  class="col-md-3">
+    {{input list="month-list" class="form-control" id="monthList" placeholder="Month"}}
+    <datalist id="month-list">
+               <option>January</option>
+               <option>February</option>
+               <option>March</option>
+               <option>April</option>
+               <option>May</option>
+               <option>Juni</option>
+               <option>July</option>
+               <option>August</option>
+               <option>September</option>
+               <option>October</option>
+               <option>November</option>
+               <option>December</option>
+    </datalist>
+    </div>
+
+    <div  class="col-md-3">
+    {{input list="day-list" class="form-control" id="dayList" placeholder="Day"}}
+    <datalist id="day-list">
+               <option>1</option>
+    </datalist>
+    </div>
+
+    <div  class="col-md-3">
+    {{input list="year-list" class="form-control" id="yearList" placeholder="Year"}}
+    <datalist id="year-list">
+               <option>1</option>
+    </datalist>
+    </div>
+
+    </form> 
+
+   </div>
+  </div>   
+ 
+        <!--footer-->
+  <div class="modal-footer" >
+        <!--white space-->         
+   <div class="col-md-12">           
+    <a href="#" class="btn btn-success btn-block" id="createButton" {{action 'onRegister'}}>Create account</a>
+   </div>
+  </div>
+ </div>
+</div>
+</div>
+
+{{yield}}

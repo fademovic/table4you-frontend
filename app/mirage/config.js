@@ -10,7 +10,8 @@ export default function() {
       streetName: 'Adresa1',
       city: 'Grad1',
       country: 'Drzava1',
-      image:'/assets/images/popular.jpg'
+      image:'/assets/images/popular.jpg',
+      rating:4
     }, 
     {
       restaurantId:2,
@@ -18,7 +19,8 @@ export default function() {
       streetName: 'Adresa2',
       city: 'Grad2',
       country: 'Drzava2',
-      image:'/assets/images/new.jpg'
+      image:'/assets/images/new.jpg',
+      rating:3
     }, 
     {
       restaurantId:3, 
@@ -26,7 +28,8 @@ export default function() {
       streetName: 'Adresa3',
       city: 'Grad3',
       country: 'Drzava3',
-      image:'/assets/images/jumbotron.jpg'
+      image:'/assets/images/jumbotron.jpg',
+      rating:2
     },
     {
       restaurantId:4 ,
@@ -34,7 +37,8 @@ export default function() {
       streetName: 'Adresa4',
       city: 'Grad4',
       country: 'Drzava4',
-      image:'/assets/images/popular.jpg'
+      image:'/assets/images/popular.jpg',
+      rating:5
     },
     {
       restaurantId:5 ,
@@ -115,7 +119,7 @@ export default function() {
 
   this.get('/restaurants/4', function() {
     return {
-       restaurantId:4, 
+      restaurantId:4, 
       name: 'Restoran4',
       streetName: 'Adresa4',
       city: 'Grad4',
@@ -124,8 +128,41 @@ export default function() {
     };
   });
 
+  this.post('/registration', function() {  
+    return {
+      authToken: 'testnitoken'
+    };
+  });
+  
+  this.post('/login', function() {
+      return {
+      authToken: 'testnitoken'
+    };
+    
+    });
+
+  this.get('/current-user',function(){
+   return{
+    firstName:'Korisnik1',
+    lastName:'Prezime1',
+    email:'korisnik1prezime1@gmail.com',
+    phone:123456789,
+    pass:123,
+    passConfirmation:123,
+    city:'Grad1',
+    country:'Drzava1',
+    streetName:'Ulica1',
+    authToken:'testnitoken'
+   };
+  });
 
 
+//dinamicki da kreiras podatke, mozes preko db-a, ali moras factories i scenarios podesiti
+  /*this.get('/registration', function(db, request) {
+  return {
+    registration: db.registration
+  };
+});*/
 
 
 
@@ -155,36 +192,7 @@ export default function() {
     this.get('/contacts/:id', 'user');
     this.get('/contacts/:id', ['contact', 'addresses']);
   */
-  /*this.get('ovdje ide moja url kreiran u servisu vezanom za ovo/popular-Restaurants',function()
-  {
-    return 
-    {
-      data: [
-      {
-        type:'popular-Restaurants',
-        id:1,
-        attributes:
-        {
-          image:'assets/images/popular.jpg',
-          adress: Adresa1,
-          name: Resotran1
-        }
-      },
-      {
-        type:'popular-Restaurants',
-        id:2,
-        attributes:
-        {
-          image:'assets/images/popular.jpg',
-          adress: Adresa2,
-          name: Resotran2
-        }
-      }  
-      }]
-    };
-        });
-
-  }*/
+  
 
   /*
     POST shorthands

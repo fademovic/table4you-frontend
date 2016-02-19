@@ -1,5 +1,5 @@
 import Ember from 'ember';
-//ovdje akcije
+
 var value=0;
 
 
@@ -8,20 +8,35 @@ export default Ember.Component.extend({
  ajax: Ember.inject.service('restaurants-service'), 
   init() {
     this._super.apply(this,arguments);
+    
     this.get('ajax').getPopularRestaurants().done(data => {
       this.set('restaurants', data);
     });
-  },
+
+    this.test;
+
+  }, 
+ 
 
     actions: {
+     
+        test:function()
+        {
+            for(var i=1;i<=10;i++)
+             {  
+               document.getElementById("span"+i).innerHTML ="&#9733";
+               document.getElementById("span"+i).style.color = "gold";
+
+             }
+                      
+        },
+
         leftSlide: function() 
         {
             
             this.$( "div.horizontalSlider" ).scrollLeft( value );
             value+=-100;
 
-            
-            
         },
 
         rightSlide: function() 
@@ -32,14 +47,8 @@ export default Ember.Component.extend({
 
         },
 
-    populateMap: function() {
-    //Get store
-    var store = this.get('data');
-    //Search Store
-    store.map(item => {
-        console.log(item.get('name'));
-    });
-}
+    
+
     }
 });
 
