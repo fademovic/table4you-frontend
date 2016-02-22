@@ -24,12 +24,42 @@ body {
 {
   color: gray;
 }
+
 .jumbotron 
 {
-    background: url('/assets/images/jumbotron.jpg')  center center;
-    min-height: 400px;
-   
+    background: url('/assets/images/moving2.jpg') no-repeat center; 
+    width:100%;
+    height:400px;
+    margin-bottom: 20px;
+    
+
+  animation-name: slidein;
+  animation-duration: 80s;
+  animation-iteration-count: infinite;  
 }
+
+/*@-webkit-keyframes chrome, inace @keyframes*/
+@-webkit-keyframes slidein {
+  from {
+    background-position: center }
+
+  to {
+    background-position: top right}
+     0%  {background-position: 50% 50%}
+    10%  {background-position: 25% 25%}
+    20%  {background-position: 75% 25%}
+    30%  {background-position: 25% 75%}
+    40%  {background-position: 75% 75%}
+    50%  {background-position: 50% 50%}
+    60%  {background-position: 75% 25%}
+    70%  {background-position: 25% 25%}
+    80%  {background-position: 75% 75%}
+    90%  {background-position: 25% 75%}
+   100%  {background-position: 50% 50%}
+
+}
+}
+
 .margineSlike 
 {
  margin: 0px 0px 0px 30px;
@@ -77,7 +107,7 @@ body {
     margin-left: 10%;
     margin-bottom: 2%;
     overflow-y:hidden;
-    overflow-x:hidden; 
+    overflow-x:hidden;
 
 }
 
@@ -87,6 +117,7 @@ body {
     height: 300px;
     margin-right: 10px;
 }
+
 .rating {
       unicode-bidi: bidi-override;
       direction: rtl;
@@ -120,4 +151,14 @@ body {
   font-size: 200%;
   color: white;
 
+}
+
+.glyphicon-chevron-left
+{
+  font-size: 200%;
+}
+
+.glyphicon-chevron-right
+{
+  font-size: 200%;
 }
