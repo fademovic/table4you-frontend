@@ -1,0 +1,41 @@
+
+ <div class="row col-md-12">
+   <div class="col-md-4 form-group" >    
+   <label>{{title}}</label>
+    <select class="form-control" id="monthList">
+               <option>January</option>
+               <option>February</option>
+               <option>March</option>
+               <option>April</option>
+               <option>May</option>
+               <option>Juni</option>
+               <option>July</option>
+               <option>August</option>
+               <option>September</option>
+               <option>October</option>
+               <option>November</option>
+               <option>December</option>
+    </select>
+   </div> 
+ 
+   <div class="col-md-3 form-group">
+   <label></label>
+    <select class="form-control" id="dayList">
+      {{#each days as |day|}}
+      <option value="{{day}}">{{day}}</option>
+      {{/each}}          
+    </select>
+   </div> 
+
+   
+   
+  <div class="col-md-3 form-group"> 
+  <label></label>
+    <select id="year-list" class="form-control" id="yearList">
+      {{#each years as |year|}}
+      <option value="{{year}}">{{year}}</option>
+      {{/each}} 
+    </select>
+  </div>
+    
+</div>

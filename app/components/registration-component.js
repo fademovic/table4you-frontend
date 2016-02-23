@@ -4,6 +4,25 @@ import Ember from 'ember';
 export default Ember.Component.extend({  
  ajax: Ember.inject.service('user-service'),
 
+  days: function() {
+    var result = [];
+    //var datum = new Date(); datum.getYear()
+    for (var i =1; i <= 31; i++) {
+     result.push(i);
+    }
+    return result.reverse();
+    }.property(),
+
+    years: function() {
+    var result = [];
+    //var datum = new Date(); datum.getYear()
+    for (var i = 1950; i < 2016; i++) {
+     result.push(i);
+    }
+     return result.reverse();
+    }.property(),
+     
+
  actions:
  { 
   
@@ -18,19 +37,28 @@ export default Ember.Component.extend({
           city: this.get("city"),   
           country: this.get("country"),
           streetName: this.get("streetName")
-      }).done(function(response) {
+      }).done(function(response) { 
         
-        setAccessToken('authToken', response.authToken);
-        // Spasiti token u browser  
-        // refresh stranice
-        window.location.reload(true);
+        this.get('ajax').setAccessToken(response.authToken);
+        this.userService.getCurrentUser()
+             .done(function(response) {
+               this.userService.setCurrentUser(response);
+             }.bind(this));
+
       }.bind(this))
       .fail(function(response) {
         this.set('error', response.errorMessage);
       }.bind(this));
-    }
+    
+      $("#signUpModal").modal("toggle");
+    },
+
+   
+
+
  
     
   }
+    
   
 });

@@ -1,0 +1,67 @@
+ <div class="row" class="container">
+
+   <form role="form" >
+
+    
+     <div class="form-group">
+      <div class="row">
+       <div class="col-md-3">
+       <label>Number of people</label>
+        {{input type="number" class="form-control" id="brojLjudi" min="1" max="10"}}
+       </div>
+      </div>
+     </div>
+    
+
+    
+     <div class="form-group">
+      <div class="row">
+       <div class="col-md-3">
+       <label>Date of reservation</label>
+        {{input type="date" class="form-control" id="datum" min="2016-01-01"}}
+       </div>
+      </div>
+     </div>
+    
+      
+  
+     <div class="form-group">
+      <div class="row">
+       <div class="col-md-3">
+       <label>Time of reservation</label>
+        {{input type="time" class="form-control" id="vrijeme" }}
+       </div>
+      </div>
+     </div>
+    
+          
+    
+     <div class="form-group">
+      <div class="row">
+       <div class="col-md-3">
+       <label>Select restaurant</label>
+       {{log restaurants}}
+        {{ember-selectize content=restaurants placeholder="Select restaurant" optionValuePath="content.restaurantId"
+        optionLabelPath="content.name"}}
+        </div>
+      </div>
+     </div>
+
+    <div class="form-group">
+     <div class="row">
+      <div class="col-md-3">
+      <label>Note</label>
+       <textarea class="form-control"></textarea>
+      </div>
+     </div> 
+    </div>  
+
+
+     <div> 
+     {{#link-to "reservation"}}
+     <a href="#" class="btn btn-primary">Make Reservation</a>
+     {{/link-to}}
+     </div>
+   </form>
+</div>
+{{yield}}

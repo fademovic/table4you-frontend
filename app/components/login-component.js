@@ -6,22 +6,7 @@ export default Ember.Component.extend({
   
   actions:
   {
-     
-    /*
-  	createSession: function()
-  	{    
-  		if (this.mail=='proba')
-  			{ 
-  		        $("#signUp").hide();
-  		        $("#login").hide();
-  		        $("#test1").text("Fadil Ademovic");//kupis sve podatke o korisniku jer ti trebaju
-  		         //da bi mogao ih ispisati
-  		        $('#loginModal').modal('toggle');
-  		        
-            }
-
-  	}*/
-
+    
       onLogin: function() {
       this.get('ajax').loginUser({
         email: this.get('mail'),
@@ -39,6 +24,8 @@ export default Ember.Component.extend({
       .fail(function(response) {
         this.set('error', response.errorMessage);
       }.bind(this));
+
+      $("#signUpModal").modal("toggle");
     }
 
   }
