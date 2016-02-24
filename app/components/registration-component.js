@@ -28,15 +28,17 @@ export default Ember.Component.extend({
   
       onRegister: function() {
       this.get('ajax').registerUser({
+          email: this.get("emailReg"), 
+          pass: this.get("pwdReg"),          
+          passConfirmation: this.get("pwdConfirmation"),  
           firstName: this.get("firstName"),
           lastName: this.get("lastName"),
-          email: this.get("emailReg"), 
-          phone: this.get("tel"),
-          pass: this.get("pwdReg"),          
-          passConfirmation: this.get("pwdConfirmation"),
+          adress:{
           city: this.get("city"),   
           country: this.get("country"),
-          streetName: this.get("streetName")
+          streetName: this.get("streetName")},
+          phone: this.get("tel"),
+          gender:this.$( "input:checked" ).val(),         
       }).done(function(response) { 
         
         this.get('ajax').setAccessToken(response.authToken);
@@ -52,6 +54,9 @@ export default Ember.Component.extend({
     
       $("#signUpModal").modal("toggle");
     },
+     
+
+
 
    
 

@@ -2,7 +2,7 @@ export default function() {
 
   // These comments are here to help you get started. Feel free to delete them.
 
-  this.get('/restaurants', function() {
+  this.get('/v1/restaurants', function() {
     return [
     {
       restaurantId:1 ,
@@ -84,7 +84,7 @@ export default function() {
   });
 
 
-  this.get('/restaurants/1', function() {
+  this.get('/v1/restaurants/1', function() {
     return {
       restaurantId:1, 
       name: 'Restoran1',
@@ -95,7 +95,7 @@ export default function() {
     };
   });
 
-    this.get('/restaurants/2', function() {
+    this.get('/v1/restaurants/2', function() {
     return {
       restaurantId:2, 
       name: 'Restoran2',
@@ -106,7 +106,7 @@ export default function() {
     };
   });
 
-  this.get('/restaurants/3', function() {
+  this.get('/v1/restaurants/3', function() {
     return {
       restaurantId:3, 
       name: 'Restoran3',
@@ -117,7 +117,7 @@ export default function() {
     };
   });
 
-  this.get('/restaurants/4', function() {
+  this.get('/v1/restaurants/4', function() {
     return {
       restaurantId:4, 
       name: 'Restoran4',
@@ -128,20 +128,20 @@ export default function() {
     };
   });
 
-  this.post('/registration', function() {  
+  this.post('/v1/registration', function() {  
     return {
       authToken: 'testnitoken'
     };
   });
   
-  this.post('/login', function() {
+  this.post('/v1/login', function() {
       return {
       authToken: 'testnitoken'
     };
     
     });
 
-  this.get('/current-user',function(){
+  this.get('/v1/current-user',function(){
    return{
     firstName:'Korisnik1',
     lastName:'Prezime1',

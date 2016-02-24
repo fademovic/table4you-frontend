@@ -91,6 +91,8 @@ body {
 {
    height: 200px;
    width: 200px;
+
+
 }
 .adresa
 {
@@ -107,7 +109,6 @@ body {
     margin-bottom: 2%;
     overflow-y:hidden;
     overflow-x:hidden;
-
 }
 
 .celija {
@@ -115,6 +116,7 @@ body {
     width: 200px;
     height: 300px;
     margin-right: 10px;
+    
 
 }
 
@@ -133,6 +135,7 @@ body {
 .glyphicon-chevron-left
 {
   font-size: 200%;
+
 }
 
 .glyphicon-chevron-right
@@ -160,4 +163,7 @@ body {
     width: 40%;
     
 }
+
+
+
 

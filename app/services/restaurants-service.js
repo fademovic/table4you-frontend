@@ -4,14 +4,14 @@ export default Base.extend({
 	getPopularRestaurants() {
 		return this.ajax({
 			method: 'GET',
-			url: '/restaurants'
+			url: '/v1/restaurants'
 		});
 	},
 
 	getSingleRestaurant(id) {
 		return this.ajax({
 			method: 'GET',
-			url: '/restaurants/' + id,
+			url: '/v1/restaurants/' + id,
 		 
 		});
 	}

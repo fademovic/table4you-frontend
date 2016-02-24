@@ -21,5 +21,15 @@ export default Ember.Component.extend({
     }
      return result.reverse();
     }.property(),
-     
-});     
+    
+    actions:{
+
+      test: function()
+      {
+        alert(this.$( "#monthList" ).val());
+        alert(this.$( "#dayList" ).val());
+        alert(this.$( "#yearList" ).val());
+
+      }
+    } 
+});      

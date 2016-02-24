@@ -10,7 +10,7 @@ export default Base.extend({
  {
    return this.ajax({
      method: 'POST',
-     url: '/registration',
+     url: '/v1/registration',
      data: user});
  },
 
@@ -19,7 +19,7 @@ export default Base.extend({
    //treba mi nasljedjena iz options
    return this.ajax({
    method: 'POST',
-   url: '/login',
+   url: '/v1/login',
    data:{email:email,password:password}, 
  });
  },
@@ -28,7 +28,7 @@ export default Base.extend({
  {
    return this.ajax({
     method: 'GET',
-    url: '/current-user'
+    url: '/v1/current-user'
    });
  },
  
