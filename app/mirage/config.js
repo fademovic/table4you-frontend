@@ -7,77 +7,87 @@ export default function() {
     {
       restaurantId:1 ,
       name: 'Restoran1',
-      streetName: 'Adresa1',
+      adress:
+      {streetName: 'Adresa1',
       city: 'Grad1',
       country: 'Drzava1',
+      },
       image:'/assets/images/popular.jpg',
       rating:4
     }, 
     {
       restaurantId:2,
       name: 'Restoran2',
-      streetName: 'Adresa2',
+      adress:{streetName: 'Adresa2',
       city: 'Grad2',
       country: 'Drzava2',
+      },
       image:'/assets/images/new.jpg',
       rating:3
     }, 
     {
       restaurantId:3, 
       name: 'Restoran3',
-      streetName: 'Adresa3',
+      adress:{streetName: 'Adresa3',
       city: 'Grad3',
       country: 'Drzava3',
+      },
       image:'/assets/images/jumbotron.jpg',
       rating:2
     },
     {
       restaurantId:4 ,
       name: 'Restoran4',
-      streetName: 'Adresa4',
+      adress:{streetName: 'Adresa4',
       city: 'Grad4',
       country: 'Drzava4',
+      },
       image:'/assets/images/popular.jpg',
       rating:5
     },
     {
       restaurantId:5 ,
       name: 'Restoran5',
-      streetName: 'Adresa5',
+      adress:{streetName: 'Adresa5',
       city: 'Grad5',
       country: 'Drzava5',
+      },
       image:'/assets/images/new.jpg'
     },
     {
       restaurantId:6 ,
       name: 'Restoran6',
-      streetName: 'Adresa6',
+      adress:{streetName: 'Adresa6',
       city: 'Grad6',
       country: 'Drzava6',
+      },
       image:'/assets/images/jumbotron.jpg'
     },
     {
       restaurantId:7 ,
       name: 'Restoran7',
-      streetName: 'Adresa7',
+      adress:{streetName: 'Adresa7',
       city: 'Grad7',
       country: 'Drzava7',
+      },
       image:'/assets/images/popular.jpg'
     },
     {
       restaurantId:8 ,
       name: 'Restoran8',
-      streetName: 'Adresa8',
+      adress:{streetName: 'Adresa8',
       city: 'Grad8',
       country: 'Drzava8',
+      },
       image:'/assets/images/new.jpg'
     },
     {
       restaurantId:9 ,
       name: 'Restoran9',
-      streetName: 'Adresa9',
+      adress:{streetName: 'Adresa9',
       city: 'Grad9',
       country: 'Drzava9',
+      },
       image:'/assets/images/jumbotron.jpg'
     }
     ];
@@ -88,10 +98,12 @@ export default function() {
     return {
       restaurantId:1, 
       name: 'Restoran1',
+      adress:{
       streetName: 'Adresa1',
       city: 'Grad1',
-      country: 'Drzava1', 
-      image:'/assets/images/popular.jpg'
+      country: 'Drzava1',
+      },
+      image:'/assets/images/popular.jpg',
     };
   });
 
@@ -99,9 +111,10 @@ export default function() {
     return {
       restaurantId:2, 
       name: 'Restoran2',
-      streetName: 'Adresa2',
+      adress:{streetName: 'Adresa2',
       city: 'Grad2',
       country: 'Drzava2', 
+      },
       image:'/assets/images/new.jpg'
     };
   });
@@ -110,9 +123,10 @@ export default function() {
     return {
       restaurantId:3, 
       name: 'Restoran3',
-      streetName: 'Adresa3',
+      adress:{streetName: 'Adresa3',
       city: 'Grad3',
       country: 'Drzava3', 
+      },
       image:'/assets/images/jumbotron.jpg'
     };
   });
@@ -121,9 +135,10 @@ export default function() {
     return {
       restaurantId:4, 
       name: 'Restoran4',
-      streetName: 'Adresa4',
+      adress: {streetName: 'Adresa4',
       city: 'Grad4',
       country: 'Drzava4', 
+      },
       image:'/assets/images/popular.jpg'
     };
   });
@@ -149,9 +164,11 @@ export default function() {
     phone:123456789,
     pass:123,
     passConfirmation:123,
+    adress:{
     city:'Grad1',
     country:'Drzava1',
     streetName:'Ulica1',
+     },
     authToken:'testnitoken'
    };
   });

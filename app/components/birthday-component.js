@@ -26,10 +26,7 @@ export default Ember.Component.extend({
 
       test: function()
       {
-        alert(this.$( "#monthList" ).val());
-        alert(this.$( "#dayList" ).val());
-        alert(this.$( "#yearList" ).val());
-
+        alert(this.$( "#dayList" ).val()+"/"+this.$( "#monthList" ).val()+"/"+this.$( "#yearList" ).val());
       }
     } 
 });      

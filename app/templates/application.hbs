@@ -3,13 +3,13 @@
  <div class="container">
 	<!--naslov -->
   <div class="navbar-brand">Table4You</div>  
-<div align="right" class="navbar-btn">
+   <div align="right" class="navbar-btn">
   
-   {{#unless userService.currentUser}}
-    <a href="#" id="signUp" data-toggle="modal" class="btn btn-success" data-target="#signUpModal">SignUp</a>
-   <a href="#" id="login" data-toggle="modal" data-target="#loginModal" >Login</a>
+    {{#unless userService.currentUser}}
+     <a href="#" id="signUp" data-toggle="modal" class="btn btn-success" data-target="#signUpModal">SignUp</a>
+      <a href="#" id="login" data-toggle="modal" data-target="#loginModal" >Login</a>
     {{else}}
-    {{userService.currentUser.firstName}}  <a href="" {{action 'logout'}}>Logout</a>
+     {{userService.currentUser.firstName}}  <a href="" {{action 'logout'}}>Logout</a>
     {{/unless}}
 
   </div> 
@@ -24,9 +24,7 @@
  </div>
 </footer>
 
-
-{{outlet}}
-
-
 {{login-component}}
 {{registration-component}}
+
+{{outlet}}

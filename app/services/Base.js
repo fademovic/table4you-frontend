@@ -14,15 +14,17 @@ export default Ember.Service.extend({
 
   ajax: function(options) {
     var params = {}
-    //duplicirati options
-   /* duplicate options; Ember.merge...
-    {
+    Ember.merge(params,options);
+
+    Ember.merge(params,{
       headers: function() {
+         
         return {
           "USER-ACCESS-TOKEN":this.get("session.authToken"),
         };
       }
-    }*/
+    });
+   
     return Ember.$.ajax(options);
   },
 

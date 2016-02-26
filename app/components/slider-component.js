@@ -15,28 +15,19 @@ export default Ember.Component.extend({
   
   }, 
  
- //   maxWith: ,
-
     actions: {
       leftSlide: function() 
         {   
-          
-        
             this.$( "div.horizontal-slider" ).animate({scrollLeft: '+=-200px'},"slow");//slow ili velicina(600 700..)
 
            // this.set('value',this.get('value')-150);
-                        
-
         },
 
         rightSlide: function() 
         {            
-
             this.$( "div.horizontal-slider" ).animate({scrollLeft: '+=200px'},"slow");
                         
                         //this.set('value',this.get('value')+150);
-          
-
         },
 
     

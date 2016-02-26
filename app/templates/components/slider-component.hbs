@@ -1,16 +1,15 @@
-<!--treba mi popular Restaurant, see all i buttoni za slajd, ali da se ne prikazuju devet puta nego jednom, moze li se to uraditi..-->
 <article class="index-component container" >
 
  <div class="row">
   <div class="col-md-11 col-xs-10">
 	 <label>{{title}}</label>   
-	 <a href="#">See All</a>
+	  <a href="#">See All</a>
 	</div>
 	<!--lijeve i desne kontrole-->
-   <div class="col-md-1 col-xs-2">
-	  <a  class="glyphicon glyphicon-chevron-left" role="button" {{action 'leftSlide'}}></a> 
-     <a  class="glyphicon glyphicon-chevron-right" role="button" {{action 'rightSlide'}}></a> 
-   </div> 
+  <div class="col-md-1 col-xs-2">
+	 <a  class="glyphicon glyphicon-chevron-left" role="button" {{action 'leftSlide'}}></a> 
+    <a  class="glyphicon glyphicon-chevron-right" role="button" {{action 'rightSlide'}}></a> 
+  </div> 
  </div> 
 
  <div class="row horizontal-slider" > 
@@ -19,9 +18,9 @@
     {{#link-to "restaurants" singleRestaurant.restaurantId }}
 		 <img src={{singleRestaurant.image}} alt="restoran" class="img-rounded velicinaSlike" />
 	  {{/link-to}}
-	  <p  class="ime">{{singleRestaurant.name}}</p>
-	  <p  class="adresa">{{singleRestaurant.streetName}}</p>
-    <div class="center">
+	   <p  class="ime">{{singleRestaurant.name}}</p>
+	    <p  class="adresa">{{singleRestaurant.address.streetName}}</p>
+   <div class="center">
     {{star-component rating=singleRestaurant.rating }}
     </div>
    </div>

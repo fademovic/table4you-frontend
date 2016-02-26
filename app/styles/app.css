@@ -165,5 +165,27 @@ body {
 }
 
 
+.invalidBorder
+{
+  border: ;
+}
 
+.empty-paragraph
+{
+  color:red;
+}
 
+.invalid-paragraph
+ {
+  color:red;
+ }
+
+.pass-paragraph
+{
+  color: gray;
+}
+
+.conf-paragraph
+{
+  color: gray;
+}

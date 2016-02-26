@@ -4,16 +4,27 @@ export default Ember.Component.extend({
   
   ajax: Ember.inject.service('user-service'), 
   
+  /*
+  valid:function()
+  {
+      if(this.get('mail').length<4)
+      {
+        isInvalid: true,
+       }
+
+  }.property(),*/
+
   actions:
   {
     
       onLogin: function() {
+      
+
       this.get('ajax').loginUser({
         email: this.get('mail'),
         password: this.get('pass')
       }).done(function(response) {
         this.get('ajax').setAccessToken(response.authToken);
-
 
           this.userService.getCurrentUser()
             .done(function(response) {
@@ -25,7 +36,8 @@ export default Ember.Component.extend({
         this.set('error', response.errorMessage);
       }.bind(this));
 
-      $("#signUpModal").modal("toggle");
+      $("#loginModal").modal("toggle");
+
     }
 
   }
