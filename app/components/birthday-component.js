@@ -2,8 +2,7 @@ import Ember from 'ember';
 
 
 export default Ember.Component.extend({  
- ajax: Ember.inject.service('user-service'),
-
+ 
   days: function() {
     var result = [];
     //var datum = new Date(); datum.getYear()
@@ -22,11 +21,20 @@ export default Ember.Component.extend({
      return result.reverse();
     }.property(),
     
+    
+   
     actions:{
+      
 
-      test: function()
-      {
-        alert(this.$( "#dayList" ).val()+"/"+this.$( "#monthList" ).val()+"/"+this.$( "#yearList" ).val());
-      }
+
+     onSelectedDay: function() {
+      this.attrs.day.update(this.$("#dayList").val());
+     },
+     onSelectedMonth: function() {
+      this.attrs.month.update(this.$("#monthList").val());
+     },
+     onSelectedYear: function() {
+      this.attrs.year.update(this.$("#yearList").val());
+     },
     } 
 });      

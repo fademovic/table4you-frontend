@@ -13,7 +13,6 @@ function injectUserService(application, userService) {
 export function initialize(application) {
   var userService = UserService.create();
 
-
   // false, 0, null, undefined, ""
   if (userService.get('authToken')) {
     application.deferReadiness();

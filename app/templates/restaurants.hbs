@@ -2,5 +2,14 @@
 <a  href="#"  >
  <img src={{model.image}} alt="restoran" class="img-rounded velicinaSlike"  >
 </a> 
-<p>{{model.name}}</p>
-<p>{{model.address.streetName}}</p>
+<div>
+ <p>Name: {{model.name}} </p>
+  <p>Street name: {{model.address.streetName}}</p>
+   <p>City: {{model.address.city}}</p>
+    <p>Country: {{model.address.country}}</p>
+     <p>Phone: {{model.phone}}</p>
+      <p>WorkingHours: {{model.workingHours}}</p>
+       <p>Reservation price: {{model.resertvationPrice}}</p>
+        <p>Deals: {{model.deals}}</p>
+         {{star-component rating=model.rating }}
+</div>

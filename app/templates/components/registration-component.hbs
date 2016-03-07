@@ -76,8 +76,11 @@
         <input type="radio" name="gender" value="Male" checked> Male
          <input type="radio" name="gender" value="Female"> Female 
       </div>
+ 
+    
+    {{birthday-component title="Birthday:" day=(mut day) month=(mut month) year=(mut year)}}
 
-    {{birthday-component title="Birthday:"}}
+        
     
     <div  class="col-md-8">
      <p class="empty-paragraph" id="emptyParagraph"></p>

@@ -18,7 +18,6 @@ export default Ember.Service.extend({
 
     Ember.merge(params,{
       headers: function() {
-         
         return {
           "USER-ACCESS-TOKEN":this.get("session.authToken"),
         };

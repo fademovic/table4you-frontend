@@ -7,7 +7,7 @@ export default function() {
     {
       restaurantId:1 ,
       name: 'Restoran1',
-      adress:
+      address:
       {streetName: 'Adresa1',
       city: 'Grad1',
       country: 'Drzava1',
@@ -18,7 +18,7 @@ export default function() {
     {
       restaurantId:2,
       name: 'Restoran2',
-      adress:{streetName: 'Adresa2',
+      address:{streetName: 'Adresa2',
       city: 'Grad2',
       country: 'Drzava2',
       },
@@ -28,7 +28,7 @@ export default function() {
     {
       restaurantId:3, 
       name: 'Restoran3',
-      adress:{streetName: 'Adresa3',
+      address:{streetName: 'Adresa3',
       city: 'Grad3',
       country: 'Drzava3',
       },
@@ -38,7 +38,7 @@ export default function() {
     {
       restaurantId:4 ,
       name: 'Restoran4',
-      adress:{streetName: 'Adresa4',
+      address:{streetName: 'Adresa4',
       city: 'Grad4',
       country: 'Drzava4',
       },
@@ -48,7 +48,7 @@ export default function() {
     {
       restaurantId:5 ,
       name: 'Restoran5',
-      adress:{streetName: 'Adresa5',
+      address:{streetName: 'Adresa5',
       city: 'Grad5',
       country: 'Drzava5',
       },
@@ -57,7 +57,7 @@ export default function() {
     {
       restaurantId:6 ,
       name: 'Restoran6',
-      adress:{streetName: 'Adresa6',
+      address:{streetName: 'Adresa6',
       city: 'Grad6',
       country: 'Drzava6',
       },
@@ -66,7 +66,7 @@ export default function() {
     {
       restaurantId:7 ,
       name: 'Restoran7',
-      adress:{streetName: 'Adresa7',
+      address:{streetName: 'Adresa7',
       city: 'Grad7',
       country: 'Drzava7',
       },
@@ -75,7 +75,7 @@ export default function() {
     {
       restaurantId:8 ,
       name: 'Restoran8',
-      adress:{streetName: 'Adresa8',
+      address:{streetName: 'Adresa8',
       city: 'Grad8',
       country: 'Drzava8',
       },
@@ -84,7 +84,7 @@ export default function() {
     {
       restaurantId:9 ,
       name: 'Restoran9',
-      adress:{streetName: 'Adresa9',
+      address:{streetName: 'Adresa9',
       city: 'Grad9',
       country: 'Drzava9',
       },
@@ -98,7 +98,7 @@ export default function() {
     return {
       restaurantId:1, 
       name: 'Restoran1',
-      adress:{
+      address:{
       streetName: 'Adresa1',
       city: 'Grad1',
       country: 'Drzava1',
@@ -111,7 +111,7 @@ export default function() {
     return {
       restaurantId:2, 
       name: 'Restoran2',
-      adress:{streetName: 'Adresa2',
+      address:{streetName: 'Adresa2',
       city: 'Grad2',
       country: 'Drzava2', 
       },
@@ -123,7 +123,7 @@ export default function() {
     return {
       restaurantId:3, 
       name: 'Restoran3',
-      adress:{streetName: 'Adresa3',
+      address:{streetName: 'Adresa3',
       city: 'Grad3',
       country: 'Drzava3', 
       },
@@ -135,7 +135,7 @@ export default function() {
     return {
       restaurantId:4, 
       name: 'Restoran4',
-      adress: {streetName: 'Adresa4',
+      address: {streetName: 'Adresa4',
       city: 'Grad4',
       country: 'Drzava4', 
       },
@@ -164,7 +164,7 @@ export default function() {
     phone:123456789,
     pass:123,
     passConfirmation:123,
-    adress:{
+    address:{
     city:'Grad1',
     country:'Drzava1',
     streetName:'Ulica1',

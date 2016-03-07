@@ -2,12 +2,16 @@ import Ember from 'ember';
 
 
 export default Ember.Route.extend({
- //trebalo navesti ime servisa u zagradi
-ajax: Ember.inject.service('restaurants-service'),
+ 
+  actions: {      
+     
+     test:function(){
+        //var testa = {noPeople:this.get('People')};
+        //the final app will pull the model variable from a QR scanner
+        //this.transitionTo('reservation',testa);
+      }  
 
-  model() {
+     }
 
-    return this.get('ajax').getPopularRestaurants();
-
-  },
+    
 });

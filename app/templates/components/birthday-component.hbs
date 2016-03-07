@@ -1,18 +1,17 @@
-<button {{action "test"}}> Test</button>
  <div class="row col-md-12">
   <br>
    <div class="col-md-2 form-group" >
     <label>{{title}}</label>
-     <select class="form-control" id="dayList">
+     <select class="form-control" id="dayList" {{action 'onSelectedDay' on='change'}}>
       {{#each days as |day|}}
        <option value="{{day}}">{{day}}</option>
       {{/each}}
      </select>
-   </div> 
- 
+   </div>  
+    
    <div class="col-md-2 form-group">
     <label>&nbsp;</label>
-     <select class="form-control" id="monthList">
+     <select class="form-control" id="monthList" {{action 'onSelectedMonth' on='change'}} >
       <option>1</option>
        <option>2</option>
         <option>3</option>
@@ -27,12 +26,12 @@
                  <option>12</option>
       </select>          
      </div> 
-  
+
    
    
      <div class="col-md-3 form-group"> 
       <label>&nbsp;</label>
-       <select id="year-list" class="form-control" id="yearList">
+       <select id="year-list" class="form-control" id="yearList" {{action 'onSelectedYear' on='change'}}>
         {{#each years as |year|}}
          <option value="{{year}}">{{year}}</option>
         {{/each}} 
@@ -40,3 +39,5 @@
      </div>
     
 </div>
+
+{{yield}}

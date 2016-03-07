@@ -1,67 +1,70 @@
- <div class="row" class="container">
-
    <form role="form" class="dnoJumbotrona">
-
+    
     <div class="col-md-2">
-     <div class="form-group">
+    <label>{{people}}</label>
+     <div class="form-group"> 
       <div class="row">
-       <div class="col-md-1">
+       <div class="col-md-1 col-md-offset-2 hidden-sm hidden-xs">
         <span class="glyphiconStyle glyphicon glyphicon-user "></span>
        </div>
-       <div class="col-md-7">
-        {{input type="number" class="form-control" id="brojLjudi" min="1" max="10"}}
+       <div class="col-md-7 hidden-sm hidden-xs ">
+        {{input type="number" class="form-control" id="brojLjudi" min="1" max="10" value=noPeople }}
        </div>
-      </div>
-     </div>
+      </div>  
+     </div>  
     </div>
-
-    <div class="col-md-3">
+  
+    <div class="col-md-2">
+    <label>{{time}}</label>
      <div class="form-group">
       <div class="row">
-       <div class="col-md-1">
-        <span class="glyphiconStyle glyphicon glyphicon-calendar"></span>
-       </div>
-       <div class="col-md-9">
-        {{input type="date" class="form-control" id="datum" min="2016-01-01"}}
-       </div>
-      </div>
-     </div>
-    </div>
-      
-  <div class="col-md-2">
-     <div class="form-group">
-      <div class="row">
-       <div class="col-md-2">
+       <div class="col-md-2 hidden-sm hidden-xs">
         <span class="glyphiconStyle glyphicon glyphicon-time"></span>
        </div>
-       <div class="col-md-10">
-        {{input type="time" class="form-control" id="vrijeme" }}
+       <div class="col-md-10 hidden-sm hidden-xs">
+        {{input type="time" class="form-control" id="vrijeme"  value=timeReservation}}
        </div>
       </div>
      </div>
     </div>
-          
+ 
     <div class="col-md-3">
+    <label>{{calender}}</label>
      <div class="form-group">
       <div class="row">
-       <div class="col-md-1">
+       <div class="col-md-1 col-md-offset-1 hidden-sm hidden-xs">
+        <span class="glyphiconStyle glyphicon glyphicon-calendar"></span>
+       </div>
+       <div class="col-md-9 hidden-sm hidden-xs">
+        {{input type="date" class="form-control" id="datum" min="2016-01-01" value=dateReservation}}
+       </div>
+      </div>
+     </div>
+    </div>
+                
+    <div class="col-md-3">
+    <label>{{restaurant}}</label>
+     <div class="form-group">
+      <div class="row">
+       <div class="col-md-1 hidden-sm hidden-xs">
         <span class="glyphiconStyle glyphicon glyphicon-cutlery"></span>
        </div>
-       <div class="col-md-9">
+       <div class="col-md-9 hidden-sm hidden-xs">
        {{log restaurants}}
         {{ember-selectize content=restaurants placeholder="Select restaurant" optionValuePath="content.restaurantId"
-        optionLabelPath="content.name"}}
+        optionLabelPath="content.name" value=restaurantReservation}}
         </div>
       </div>
      </div>
     </div>
 
+    <div class="col-md-2 col-sm-12 col-xs-12" id="reservationButton">  
+      
+      {{#link-to 'reservation'}}
+       <a href="#" class="btn btn-primary" {{action 'myValueDidChange'}}>Make Reservation</a>
+      {{/link-to}}
+     </div>
 
-    <div class="col-md-2">  
-     {{#link-to "reservation"}}
-      <a href="#" class="btn btn-primary">Make Reservation</a>
-     {{/link-to}}
-    </div>
    </form>
-</div>
+
 {{yield}}

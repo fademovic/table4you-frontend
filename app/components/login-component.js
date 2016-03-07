@@ -14,7 +14,7 @@ export default Ember.Component.extend({
 
   }.property(),*/
 
-  actions:
+  actions: 
   {
     
       onLogin: function() {

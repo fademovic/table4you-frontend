@@ -10,5 +10,5 @@ export default Ember.Route.extend({
     return this.get('ajax').getSingleRestaurant(params.restaurantId);
 
   },
-
-});
+  
+});  

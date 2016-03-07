@@ -1,6 +1,6 @@
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
+html { 
   position: relative;
   min-height: 100%;
 }
@@ -8,6 +8,12 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 30px;
 }
+
+.header
+{
+  background-color: white;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -16,10 +22,7 @@ body {
   height: 30px;
   background-color: black;
 }
-.header
-{
-  background-color: white;
-}
+
 .fooPar
 {
   color: gray;
@@ -78,7 +81,12 @@ body {
 .dnoJumbotrona
 {
   /*zavisi od velicine jumbotrona*/
-  margin-top: 150px;
+  margin-top: 130px;
+}
+
+#reservationButton
+{
+  margin-top: 20px;
 }
 
 .glifikon
@@ -164,6 +172,12 @@ body {
     
 }
 
+.reservation-center{
+  width: 40%;
+  margin-left: 35%;
+  margin-top: 3%;
+}
+
 
 .invalidBorder
 {
@@ -179,7 +193,7 @@ body {
  {
   color:red;
  }
-
+  
 .pass-paragraph
 {
   color: gray;
@@ -189,3 +203,20 @@ body {
 {
   color: gray;
 }
+
+/* Center the loader */
+#loader {
+ 
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+

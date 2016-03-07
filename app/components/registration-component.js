@@ -4,35 +4,22 @@ import Ember from 'ember';
 export default Ember.Component.extend({  
  ajax: Ember.inject.service('user-service'),
 
-  days: function() {
-    var result = [];
-    //var datum = new Date(); datum.getYear()
-    for (var i =1; i <= 31; i++) {
-     result.push(i);
-    }
-    return result.reverse();
-    }.property(),
- 
-    years: function() {
-    var result = [];
-    //var datum = new Date(); datum.getYear()
-    for (var i = 1950; i < 2016; i++) {
-     result.push(i);
-    }
-     return result.reverse();
-    }.property(),
-      
+ month:0,
+ day:0,
+ year:0,
 
  actions:
  { 
-  
+ 
+    
       onRegister: function() {
       
+     
       //REGEX
       var ck_name = /^[A-Za-z]{2,20}$/;
       var ck_tel=/^[0-9]{6,20}$/;
       var ck_pass = /^[A-Za-z0-9!"#$%&/()=?*"_:;,.+''<>@]{6,20}$/;
-      var ck_email = /^[A-Za-z0-9]+@+[a-z]+\.+[a-z]/;
+      var ck_email = /^[A-Za-z0-9._-]+@+[a-z]+\.+[a-z]/;
       
       //VALIDATION
       //invalid input
@@ -120,12 +107,19 @@ export default Ember.Component.extend({
         this.$( ".invalidBorder9" ).css("border-color","green");
       }
       
-
+      if (ck_email.test(this.get("emailReg")) && ck_pass.test(this.get("pwdReg")) && ck_pass.test(this.get("pwdConfirmation")) 
+        && ck_name.test(this.get("firstName")) && ck_name.test(this.get("lastName")) && ck_name.test(this.get("city")) 
+        && ck_name.test(this.get("country")) && ck_name.test(this.get("streetName")) && ck_tel.test(this.get("tel")) 
+        && this.get("firstName") && this.get("lastName") 
+        && this.get("streetName") &&this.get("country") && this.get("city")&& this.get("pwdConfirmation") 
+        && this.get("pwdReg") && this.get("emailReg")) 
+      
+     {  
      //POST 
       this.get('ajax').registerUser({
           email: this.get("emailReg"), 
-          pass: this.get("pwdReg"),          
-          passConfirmation: this.get("pwdConfirmation"),  
+          password: this.get("pwdReg"),          
+          passwordConfirmation: this.get("pwdConfirmation"),  
           firstName: this.get("firstName"),
           lastName: this.get("lastName"),
           address:{
@@ -134,13 +128,13 @@ export default Ember.Component.extend({
           streetName: this.get("streetName")},
           phone: this.get("tel"),
           gender:this.$( "input:checked" ).val(),
-          birthdate:"10/01/1994", 
+          birthdate:this.get('day')+"/"+this.get('month')+"/"+this.get('year'),   
       }).done(function(response) { 
         
         this.get('ajax').setAccessToken(response.authToken);
         this.userService.getCurrentUser()
              .done(function(response) {
-               this.userService.setCurrentUser(response);
+               this.userService.setCurrentUser(response); 
              }.bind(this));
 
       }.bind(this))
@@ -148,7 +142,10 @@ export default Ember.Component.extend({
         this.set('error', response.errorMessage);
       }.bind(this));
     
-      //$("#signUpModal").modal("toggle");
+      $("#signUpModal").modal("toggle");
+  
+    }
+
     },
      
 
