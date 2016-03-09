@@ -1,8 +1,7 @@
 import Base from './Base';
 
 export default Base.extend({
-  reservation:null,
-
+ 
 	getPopularRestaurants() {
 		return this.ajax({
 			method: 'GET',
@@ -18,14 +17,5 @@ export default Base.extend({
 		});
 	},
 
-	 setReservation(reserve)
- {   
-    this.set('reservation',reserve);
- },
-
- getReservation()
- {
- 	  return this.get('reservation');
- }
 
 });

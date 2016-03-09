@@ -1,9 +1,6 @@
+ <button {{action 'test'}}>test</button>
 
-
-{{yield}}
-<button {{action 'test'}}>Test</button>
-
-<div class="reservation-center">
+<div class="reservation-center"> 
     
      <div class="form-group">
        <div class="col-md-4 hidden-sm hidden-xs ">
@@ -33,6 +30,7 @@
        {{log restaurants}}
         {{ember-selectize content=restaurants placeholder="Select restaurant" optionValuePath="content.restaurantId"
         optionLabelPath="content.name" value=restaurantReservation}}
+        {{restaurantReservation}}
         </div>
       </div>
 

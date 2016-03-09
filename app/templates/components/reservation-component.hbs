@@ -1,3 +1,4 @@
+   {{#validatable-form action="save"}}
    <form role="form" class="dnoJumbotrona">
     
     <div class="col-md-2">
@@ -8,7 +9,7 @@
         <span class="glyphiconStyle glyphicon glyphicon-user "></span>
        </div>
        <div class="col-md-7 hidden-sm hidden-xs ">
-        {{input type="number" class="form-control" id="brojLjudi" min="1" max="10" value=noPeople }}
+        {{input type="number" class="form-control" id="brojLjudi" min="1" max="10" value=noPeople}}
        </div>
       </div>  
      </div>  
@@ -51,7 +52,7 @@
        </div>
        <div class="col-md-9 hidden-sm hidden-xs">
        {{log restaurants}}
-        {{ember-selectize content=restaurants placeholder="Select restaurant" optionValuePath="content.restaurantId"
+        {{ember-selectize  content=restaurants placeholder="Select restaurant" optionValuePath="content.restaurantId"
         optionLabelPath="content.name" value=restaurantReservation}}
         </div>
       </div>
@@ -61,10 +62,11 @@
     <div class="col-md-2 col-sm-12 col-xs-12" id="reservationButton">  
       
       {{#link-to 'reservation'}}
-       <a href="#" class="btn btn-primary" {{action 'myValueDidChange'}}>Make Reservation</a>
+      <button type="submit" class="btn btn-primary" {{action 'myValueDidChange'}}>Make Reservation</button>
       {{/link-to}}
      </div>
 
    </form>
+   {{/validatable-form}}
 
 {{yield}}

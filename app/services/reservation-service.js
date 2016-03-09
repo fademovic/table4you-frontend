@@ -1,13 +1,19 @@
-import Base from './Base';
+import Ember from 'ember';
 
-export default Base.extend({
+export default Ember.Service.extend({
  
  reservation: null,
  
- setReservation(reserve)
+   setReservation(reserve)
  {   
-    this.set('reservation', reserve);
+    this.set('reservation',reserve);
  },
 
+ getReservation()
+ {
+    return this.get('reservation');
+ }
+
+ 
    
 });

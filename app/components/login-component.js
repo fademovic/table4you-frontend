@@ -3,16 +3,6 @@ import Ember from 'ember';
 export default Ember.Component.extend({  
   
   ajax: Ember.inject.service('user-service'), 
-  
-  /*
-  valid:function()
-  {
-      if(this.get('mail').length<4)
-      {
-        isInvalid: true,
-       }
-
-  }.property(),*/
 
   actions: 
   {
