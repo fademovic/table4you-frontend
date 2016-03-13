@@ -18,6 +18,15 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+ 
+
+ //fixing violation of the following content security
+  ENV.contentSecurityPolicy = {  
+    'script-src': "'self' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com",
+       'img-src': "'self' https://*.googleapis.com https://*.gstatic.com",
+       'font-src': "'self' https://*.gstatic.com",
+       'style-src': "'self' 'unsafe-inline' https://*.googleapis.com"
+}
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

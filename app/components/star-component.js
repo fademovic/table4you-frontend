@@ -11,9 +11,9 @@ export default Ember.Component.extend({
       this.$( "span.span"+i).html ("&#9733");
       this.$( "span.span"+i ).css("color", "gold" );
       
-    }
-  
-  }*/
+    } 
+   
+  }*/ 
 
   stars: function() {
     var result=[];

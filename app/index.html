@@ -6,6 +6,7 @@
     <title>Table4you</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+  
 
     {{content-for 'head'}}
 
@@ -15,13 +16,23 @@
     {{content-for 'head-footer'}}
 
   </head>
-  <body>
+   <body>
+
     {{content-for 'body'}}
-   
+
 
     <script src="assets/vendor.js"></script>
     <script src="assets/table4you-frontend.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5-NWggXKjRW3TIOkU6lil5RP_S5UrxsM">
+    </script>
+
+    <!--google Mapa-->
+    
+    
 
     {{content-for 'body-footer'}}
+
   </body>
+
 </html>

@@ -2,11 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
  
- reservation: null,
+ reservation: Ember.Object.create(),
  
    setReservation(reserve)
  {   
-    this.set('reservation',reserve);
+    this.get('reservation').setProperties(reserve);
  },
 
  getReservation()

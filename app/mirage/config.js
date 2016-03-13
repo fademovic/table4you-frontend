@@ -156,7 +156,7 @@ export default function() {
     
     });
 
-  this.get('/v1/current-user',function(){
+  this.get('/v1/getCurrentUser',function(){
    return{
     firstName:'Korisnik1',
     lastName:'Prezime1',

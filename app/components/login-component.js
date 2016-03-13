@@ -9,7 +9,7 @@ export default Ember.Component.extend({
     
       onLogin: function() {
       
-
+    debugger;
       this.get('ajax').loginUser({
         email: this.get('mail'),
         password: this.get('pass')
@@ -25,7 +25,7 @@ export default Ember.Component.extend({
       .fail(function(response) {
         this.set('error', response.errorMessage);
       }.bind(this));
-
+      
       $("#loginModal").modal("toggle");
 
     }

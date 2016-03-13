@@ -1,15 +1,70 @@
+<div class="container-fluid">
+ <div>
+  <img src={{model.image}} alt="restoran" class="restaurant-pic"  >
+   <h2 id="restaurantTitle"><span>{{model.name}}</span></h2>
+   <div id="ratingPic">
+    {{star-component rating=model.rating }}
+   </div>
+ </div>
 
-<a  href="#"  >
- <img src={{model.image}} alt="restoran" class="img-rounded velicinaSlike"  >
-</a> 
-<div>
- <p>Name: {{model.name}} </p>
-  <p>Street name: {{model.address.streetName}}</p>
-   <p>City: {{model.address.city}}</p>
-    <p>Country: {{model.address.country}}</p>
-     <p>Phone: {{model.phone}}</p>
-      <p>WorkingHours: {{model.workingHours}}</p>
-       <p>Reservation price: {{model.resertvationPrice}}</p>
-        <p>Deals: {{model.deals}}</p>
-         {{star-component rating=model.rating }}
+
+ <div class="container">
+  {{google-map latitude=model.coordinates.latitude longitude=model.coordinates.longitude}}
+ </div>
+
 </div>
+
+
+<div class="container">
+  <div class="row">
+    <nav class="col-sm-2" id="myScrollspy">
+      <ul>
+        <li><a href="#section1">About</a></li>
+        <li><a href="#section2">Reservation</a></li>
+        <li><a href="#section3">Review</a></li>
+      </ul>
+    </nav>
+
+    <div class="col-sm-10">
+     
+     <div id="section1">    
+      <h1>About</h1>
+     </div>
+      
+     <div id="section2"> 
+      
+      <h1>Reservation</h1>
+      
+      <div class="col-md-7">
+      
+      <label class="postionLabel1">People:</label> <label class="postionLabel2">Time of reservation:</label><label class="postionLabel3">Date of reservation:</label><br>
+
+      {{input type="number" class="form-control" id="peopleIndex1" min="1" max="10" value=noPeople}}
+       
+      
+      {{input type="time" class="form-control" id="timeIndex1"  value=timeReservation}}
+      
+
+      {{input type="date" class="form-control" id="dateIndex1" min="2016-01-01" value=dateReservation}}
+      </div>
+
+       <div class="col-md-2">
+       <label>Restaurant:</label><br>
+       <p id="resName">{{model.name}}</p>
+       </div>
+       
+         <div class="col-md-2">
+         {{#link-to 'reservation' model.restaurantId}}
+          <button type="submit" class="btn btn-primary" {{action 'myValueDidChange'}} id="resMake">Make Reservation</button>
+         {{/link-to}}
+         </div>
+
+     </div>  
+   
+    </div>
+    
+
+  </div>
+</div>
+
+

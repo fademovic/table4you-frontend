@@ -4,6 +4,7 @@ html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 30px;
@@ -28,7 +29,12 @@ body {
   color: gray;
 }
 
-.jumbotron 
+.restaurant-pic{
+    width:100%;
+    max-height:250px;
+}
+
+.pic-animation 
 {
     background: url('/assets/images/moving2.jpg') no-repeat center; 
     width:100%;
@@ -69,15 +75,7 @@ body {
  margin: 0px 0px 0px 30px;
 }
 
-.carousel .item
-{
-  height: 190px;
-}
 
-#myCarousel
-{
-  margin: 40px 0px 40px 0px;
-}
 
 .dnoJumbotrona
 {
@@ -85,10 +83,6 @@ body {
   margin-top: 130px;
 }
 
-#reservationButton
-{
-  margin-top: 20px;
-}
 
 .glifikon
 {
@@ -102,6 +96,12 @@ body {
    width: 200px;
 
 
+}
+
+.reservationPic
+{
+  height: 150px;
+  width: 150px;
 }
 .adresa
 {
@@ -138,11 +138,90 @@ body {
 {
   font-size: 200%;
   color: white;
+  top:10px;
+  padding-left: 40px;
+  padding-right: 10px;
 
 }
 
-.glyphicon-chevron-left
+#peopleIndex{
+  width: 7%;
+  display: inline;
+}
+
+#timeIndex{
+   width: 13%;
+  display: inline;
+}
+
+#dateIndex{
+  width: 17%;
+  display: inline;
+}
+
+
+#peopleIndex1{
+  width: 15%;
+  display: inline;
+  margin-right: 40px;
+}
+
+#timeIndex1{
+   width: 25%;
+  display: inline;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+
+#dateIndex1{
+  width: 30%;
+  display: inline;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#resMake{
+  margin-top: 25px;
+}
+
+#resName{
+  margin-top: 7px;
+}
+
+.postionLabel1
 {
+  margin-right: 40px; 
+}
+
+.postionLabel2
+{
+  margin-right: 40px;
+  margin-left: 48px; 
+}
+
+.postionLabel3
+{
+  margin-right: 40px;
+  margin-left: 20px; 
+}
+
+#resMake{
+  display: inline;
+}
+
+.selectize-control {
+    position: absolute;
+    width: 20%;
+    display: inline;
+    padding-top: 4px;
+}
+
+#makeButton{
+  margin-top: 4px;
+}
+
+.glyphicon-chevron-left
+{ 
   font-size: 200%;
 
 }
@@ -199,3 +278,80 @@ body {
   color:red;
   font-weight: normal;
 }
+
+#reservationBorder{
+  
+  border: 2px solid gray;
+  border-radius: 20px;
+  height: 200px;
+    
+}
+
+.reservation-pading
+{
+    padding-top: 25px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 50px;
+}
+
+.reservation-position{
+  margin-top: 10%;
+}
+
+.complete-button{
+  padding-top:10px;
+}
+
+.other-position{
+  padding-top: 60px;
+}
+
+.alert {
+    padding: 12px;
+    padding-left: 20px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    height: 45px;
+    width: 760px;
+    margin-top: 10px;
+}
+
+.reservation-title{
+  padding-bottom: 20px;
+}
+
+#restaurantTitle{
+  color:white;
+  position: absolute; 
+   top: 200px; 
+   left: 0;
+   margin-left: 50px; 
+   
+}
+
+#ratingPic{
+  position: absolute; 
+   top: 270px; 
+   left: 0;
+   margin-left: 55px; 
+}
+
+h2 span { 
+   color: white; 
+   font: bold 24px/45px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+#map {
+        width: 100%;
+        height: 250px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+  
+

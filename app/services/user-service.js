@@ -26,9 +26,9 @@ export default Base.extend({
    contentType: "application/json" 
  }).then(function(response) { return JSON.parse(response.response); });
  },
-
+ 
  getCurrentUser()
- {
+ { 
    return this.ajax({
     method: 'GET',
     url: '/v1/getCurrentUser'

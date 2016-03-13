@@ -1,72 +1,28 @@
-   {{#validatable-form action="save"}}
-   <form role="form" class="dnoJumbotrona">
+ <div class="row dnoJumbotrona">
+
+  <div class="col-md-10 hidden-sm hidden-xs">
+   
+   <span class="glyphiconStyle glyphicon glyphicon-user"></span>
+    {{input type="number" class="form-control" id="peopleIndex" min="1" max="10" value=noPeople}}
+
+   <span class="glyphiconStyle glyphicon glyphicon-time"></span>
+   {{input type="time" class="form-control" id="timeIndex" value=timeReservation}}
     
-    <div class="col-md-2">
-    <label>{{people}}</label>
-     <div class="form-group"> 
-      <div class="row">
-       <div class="col-md-1 col-md-offset-2 hidden-sm hidden-xs">
-        <span class="glyphiconStyle glyphicon glyphicon-user "></span>
-       </div>
-       <div class="col-md-7 hidden-sm hidden-xs ">
-        {{input type="number" class="form-control" id="brojLjudi" min="1" max="10" value=noPeople}}
-       </div>
-      </div>  
-     </div>  
-    </div>
+   <span class="glyphiconStyle glyphicon glyphicon-calendar"></span>
+   {{input type="date" class="form-control" id="dateIndex" min="2016-01-01" value=dateReservation}}
+   
+   
+   <span class="glyphiconStyle glyphicon glyphicon-cutlery"></span>
+   {{ember-selectize  content=restaurants placeholder="Select restaurant" optionValuePath="content.restaurantId" optionLabelPath="content.name" value=restaurantReservation }}
   
-    <div class="col-md-2">
-    <label>{{time}}</label>
-     <div class="form-group">
-      <div class="row">
-       <div class="col-md-2 hidden-sm hidden-xs">
-        <span class="glyphiconStyle glyphicon glyphicon-time"></span>
-       </div>
-       <div class="col-md-10 hidden-sm hidden-xs">
-        {{input type="time" class="form-control" id="vrijeme"  value=timeReservation}}
-       </div>
-      </div>
-     </div>
-    </div>
- 
-    <div class="col-md-3">
-    <label>{{calender}}</label>
-     <div class="form-group">
-      <div class="row">
-       <div class="col-md-1 col-md-offset-1 hidden-sm hidden-xs">
-        <span class="glyphiconStyle glyphicon glyphicon-calendar"></span>
-       </div>
-       <div class="col-md-9 hidden-sm hidden-xs">
-        {{input type="date" class="form-control" id="datum" min="2016-01-01" value=dateReservation}}
-       </div>
-      </div>
-     </div>
-    </div>
-                
-    <div class="col-md-3">
-    <label>{{restaurant}}</label>
-     <div class="form-group">
-      <div class="row">
-       <div class="col-md-1 hidden-sm hidden-xs">
-        <span class="glyphiconStyle glyphicon glyphicon-cutlery"></span>
-       </div>
-       <div class="col-md-9 hidden-sm hidden-xs">
-       {{log restaurants}}
-        {{ember-selectize  content=restaurants placeholder="Select restaurant" optionValuePath="content.restaurantId"
-        optionLabelPath="content.name" value=restaurantReservation}}
-        </div>
-      </div>
-     </div>
-    </div>
-
-    <div class="col-md-2 col-sm-12 col-xs-12" id="reservationButton">  
+  </div>
       
-      {{#link-to 'reservation'}}
-      <button type="submit" class="btn btn-primary" {{action 'myValueDidChange'}}>Make Reservation</button>
-      {{/link-to}}
-     </div>
-
-   </form>
-   {{/validatable-form}}
+  <div class="col-md-2">
+   {{#link-to 'reservation' id}}
+     <button type="submit" class="btn btn-primary" {{action 'myValueDidChange'}} id="makeButton">Make Reservation</button>
+   {{/link-to}}
+  </div>
+ 
+</div>
 
 {{yield}}
