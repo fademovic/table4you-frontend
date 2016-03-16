@@ -10,25 +10,22 @@ export default Ember.Component.extend({
     this.get('ajax').getPopularRestaurants().done(data => {
       this.set('restaurants', data);
     });   
-
+     
   },
-  
+    
   id:0,
+
 
 actions:{
   myValueDidChange: function() {
+  
+  this.set('id',this.get("restaurantReservation"));  
 
-  this.set('id',this.get("restaurantReservation")),
-
-   this.get('reservation').setReservation({
-    people:this.get("noPeople"),
-    time:this.get("timeReservation"),
-    date:this.get("dateReservation")
- });
-
-   
-   
-}
+    localStorage.setItem("people", this.get("noPeople"));
+    localStorage.setItem("time", this.get("timeReservation"));
+    localStorage.setItem("date",this.get("dateReservation"));
+  
+},
 
 }
 

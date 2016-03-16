@@ -9,6 +9,8 @@ module.exports = function(defaults) {
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
+  //app.import('bower_components/google-maps/lib/Google.js');
+  //app.import('bower_components/google-maps/lib/Google.min.js'); 
   app.import('bower_components/bootstrap/dist/css/bootstrap.css'); 
   app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
   app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', {

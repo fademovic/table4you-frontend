@@ -3,22 +3,19 @@ import Ember from 'ember';
 export default Ember.Component.extend({  
   
   ajax: Ember.inject.service('user-service'), 
-
+ 
   actions: 
   {
-    
+     
       onLogin: function() {
       
-    debugger;
-      this.get('ajax').loginUser({
-        email: this.get('mail'),
-        password: this.get('pass')
-      }).done(function(response) {
-        this.get('ajax').setAccessToken(response.authToken);
+  
+      this.get('ajax').loginUser(this.get('mail'),this.get('pass')).done(function(response) {
+        this.get('ajax').setAccessToken(response.token);
 
-          this.userService.getCurrentUser()
+          this.get('ajax').getCurrentUser()
             .done(function(response) {
-              this.userService.setCurrentUser(response);
+              this.get('ajax').setCurrentUser(response);
             }.bind(this));
 
       }.bind(this))
@@ -26,7 +23,9 @@ export default Ember.Component.extend({
         this.set('error', response.errorMessage);
       }.bind(this));
       
-      $("#loginModal").modal("toggle");
+
+      $("#noviModal").modal("toggle");
+      
 
     }
 

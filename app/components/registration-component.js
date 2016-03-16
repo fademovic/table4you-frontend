@@ -8,7 +8,7 @@ export default Ember.Component.extend({
  day:0,
  year:0,
 
- actions:
+ actions: 
  {   
  
     
@@ -29,20 +29,19 @@ export default Ember.Component.extend({
           phone: this.get("tel"),
           gender:this.$( "input:checked" ).val(),
           birthdate:this.get('day')+"/"+this.get('month')+"/"+this.get('year'),   
-      }).done(function(response) { 
-        
-        this.get('ajax').setAccessToken(response.authToken);
-        this.userService.getCurrentUser()
-             .done(function(response) {
-               this.userService.setCurrentUser(response); 
-             }.bind(this));
+      }).done(function(response) {
+        this.get('ajax').setAccessToken(response.token);
+
+          this.get('ajax').getCurrentUser().done(function(response) {
+              this.get('ajax').setCurrentUser(response);
+            }.bind(this));
 
       }.bind(this))
       .fail(function(response) {
         this.set('error', response.errorMessage);
       }.bind(this));
-    
-      $("#signUpModal").modal("toggle");
+  debugger;
+      $("#noviModal").modal("toggle");
   
     
 

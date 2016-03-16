@@ -4,20 +4,22 @@ export default Ember.Controller.extend({
 
   ajax: Ember.inject.service('restaurants-service'),
   reservation: Ember.inject.service('reservation-service'),
-
+  
+  isReserved:false,
 
   init() {
     
-    //Get reservation details from previous page
-    //debugger;
-    var reserve=this.get('reservation').getReservation();
-    
-    this.set('noPeople',reserve.people);
-    this.set('timeReservation',reserve.time);
-    this.set('dateReservation',reserve.date);
-     
-  },
-
+    this.set('noPeople',localStorage.getItem("people"));
+    this.set('timeReservation',localStorage.getItem("time"));
+    this.set('dateReservation',localStorage.getItem("date"));
  
+  }, 
+ 
+  
+ actions:{
+  complete: function () {
+    this.set('isReserved',true);
+  }
+ }
     
 });

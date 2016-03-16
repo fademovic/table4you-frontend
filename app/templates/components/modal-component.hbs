@@ -1,0 +1,45 @@
+
+  
+
+
+<!-- Modal za signup -->
+<div id="noviModal" class="modal fade" role="dialog" >
+ <!-- velicina modala-->
+ <div class="modal-dialog modal-md">
+<!-- Sadrzaj Modala -->
+  <div class="modal-content">
+ <!--Zaglavlje-->
+ <!--Xic za zatvaranje-->
+   <div class="modal-header" >
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+     <label>Table4You</label>    
+   </div>
+ <!--Tijelo -->
+    
+   <div class="modal-body">
+    <!--forma-->
+    <div class="tabbable"> <!-- Only required for left/right tabs -->
+        <ul class="nav nav-tabs">
+        <li class={{activeReg}}><a href="#tab1" data-toggle="tab" >Registration</a></li>
+        <li class={{activeLog}}><a href="#tab2" data-toggle="tab" >Login</a></li>
+        </ul>
+        <div class="tab-content">
+        <div class="tab-pane {{activeReg}}" id="tab1">
+            {{registration-component}}
+        </div>
+        <div class="tab-pane {{activeLog}} " id="tab2">
+          {{login-component}}
+        </div>
+        </div>
+        </div>
+      
+  </div>   
+ 
+        <!--footer-->
+  
+
+ </div>
+</div>
+</div>
+
+{{yield}}

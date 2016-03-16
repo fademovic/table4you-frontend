@@ -5,7 +5,7 @@ export default Base.extend({
  currentUser: null,
 
  
- registerUser(user)
+ registerUser(user) 
  {
    return this.ajax({
      method: 'POST',
@@ -13,7 +13,7 @@ export default Base.extend({
       data: JSON.stringify(user),
      contentType: "application/json",
      dataType: 'json',
-     }).then(function(response) { return JSON.parse(response.response); });
+     });//.then(function(response) { return JSON.parse(response.response); });
  },
 
  loginUser(email,password)
@@ -23,8 +23,10 @@ export default Base.extend({
    method: 'POST',
    url: '/v1/login',
    data:JSON.stringify({email:email,password:password}),
-   contentType: "application/json" 
- }).then(function(response) { return JSON.parse(response.response); });
+   contentType: "application/json",
+   dataType: 'json',
+   //success: function(data){debugger;} 
+ });
  },
  
  getCurrentUser()

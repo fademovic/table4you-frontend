@@ -6,10 +6,11 @@
    <div align="right" class="navbar-btn">
   
     {{#unless userService.currentUser}}
-     <a href="#" id="signUp" data-toggle="modal" class="btn btn-success" data-target="#signUpModal">SignUp</a>
-      <a href="#" id="login" data-toggle="modal" data-target="#loginModal" >Login</a>
+     <button id="signUp" data-toggle="modal" class="btn btn-success" data-target="#noviModal" {{action "activeRegistration"}}>SignUp</button>
+      <a href="#" id="login" data-toggle="modal" data-target="#noviModal" {{action "activeLogin"}}>Login</a>
     {{else}}
      {{userService.currentUser.firstName}}  <a href="" {{action 'logout'}}>Logout</a>
+   
     {{/unless}}
 
   </div> 
@@ -24,7 +25,8 @@
 
 </footer> 
 
-{{login-component}}
-{{registration-component}}
+
+{{modal-component activeReg=reg activeLog=log }}
+
 
 {{outlet}}

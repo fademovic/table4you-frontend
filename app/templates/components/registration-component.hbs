@@ -1,18 +1,5 @@
-<!-- Modal za signup -->
-<div id="signUpModal" class="modal fade" role="dialog" >
- <!-- velicina modala-->
- <div class="modal-dialog modal-md">
-<!-- Sadrzaj Modala -->
-  <div class="modal-content">
- <!--Zaglavlje-->
- <!--Xic za zatvaranje-->
-   <div class="modal-header" >
-    <button type="button" class="close" data-dismiss="modal">&times;</button>
-     <label>REGISTRATION</label>    
-   </div>
  <!--Tijelo -->
     {{#validatable-form action="onRegister"}}
-   <div class="modal-body">
     <div class="row">
     <!--forma-->
       
@@ -79,22 +66,16 @@
     
     {{birthday-component title="Birthday:" day=(mut day) month=(mut month) year=(mut year) }}
 
- 
-    
-
-   </div>
-  </div>   
- 
-        <!--footer-->
-  <div class="modal-footer" >
+  </div>
+     
+<div class="modal-footer" >
         <!--white space-->         
    <div class="col-md-12">           
     <button type="submit" class="btn btn-success btn-block" id="createButton">Create account</button>
    </div>
+
   </div>
 {{/validatable-form}}
- </div>
-</div>
-</div>
+ 
 
 {{yield}}

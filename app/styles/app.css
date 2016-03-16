@@ -296,7 +296,7 @@ body {
 }
 
 .reservation-position{
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .complete-button{
@@ -309,12 +309,15 @@ body {
 
 .alert {
     padding: 12px;
-    padding-left: 20px;
+    padding-left: 178px;
     border: 1px solid transparent;
-    border-radius: 20px;
-    height: 45px;
+    border-radius: 10px;
+    height: 70px;
     width: 760px;
-    margin-top: 10px;
+    margin-top: 5%;
+    padding-top: 17px;
+    font-size: 24px;
+    margin-left: 20%;
 }
 
 .reservation-title{
@@ -353,5 +356,13 @@ h2 span {
         margin-bottom: 30px;
       }
 
+.map-canvas {
+  width: 900px;
+  height: 400px;
+}
+
+#all{
+  margin-top: 40px;
+}
   
 

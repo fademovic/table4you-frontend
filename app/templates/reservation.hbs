@@ -1,13 +1,14 @@
+{{#if isReserved}}
+ <div class="alert alert-success col-md-8" >
+    <strong>Success!</strong> Reservation completed.
+   </div>
+   {{else}}
 <div class="reservation-position container">
  <div class="row">
   
   <div class="col-md-4">
    <h3 class="reservation-title">Complete your reservation</h3>
   </div>
-
-   <div class="alert alert-success col-md-8" hidden>
-    <strong>Success!</strong> Reservation completed.
-   </div>
  
   </div>
 
@@ -60,5 +61,7 @@
 </div>
 
 </div>
+
+{{/if}}
 
 

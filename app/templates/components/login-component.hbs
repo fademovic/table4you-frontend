@@ -1,20 +1,5 @@
-
- <!-- Modal za login -->
-<div id="loginModal" class="modal fade" role="dialog">
-<!-- velicina modala-->
- <div class="modal-dialog modal-sm">
-<!-- Sadrzaj Modala -->
-  <div class="modal-content">
- <!--Zaglavlje-->
-   <div class="modal-header">
-  <!--Xic za zatvaranje-->
-    <button type="button" class="close" data-dismiss="modal">&times;</button>
-     <label>LOGIN</label>  
-   </div>
- <!--Tijelo -->
   
    {{#validatable-form action="onLogin"}} 
-   <div class="modal-body">
     <!--forma-->
   
         <!--email-->
@@ -29,25 +14,22 @@
        {{input type="password" class="form-control "  placeholder="Password" value=pass required=true pattern=".{6,}"}}
      </div>
 
-  
-   </div>
-        <!--footer-->
+          <!--footer-->
    <div class="modal-footer">
     
     <div class="col-md-12"> 
       <button type="submit" class="btn btn-success btn-block">Login</button>
     </div>
 
-    <div class="col-md-10">
+    <div class="col-md-12">
      <a href="#" >Forgot your password?</a>
     </div>
 
    </div>
+
    {{/validatable-form}}
 
-  </div>
- </div>
-</div>
+ 
 
 {{yield}}
 
