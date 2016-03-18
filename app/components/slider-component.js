@@ -22,6 +22,8 @@ export default Ember.Component.extend({
    
  
   },
+
+  
  
     actions: {
       leftSlide: function() 

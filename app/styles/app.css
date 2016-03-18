@@ -8,6 +8,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 30px;
+  overflow-x:hidden; 
 }
 
 .header
@@ -357,12 +358,83 @@ h2 span {
       }
 
 .map-canvas {
-  width: 900px;
   height: 400px;
 }
 
-#all{
-  margin-top: 40px;
-}
-  
 
+ 
+
+  h1{
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  #all{
+  margin-top: -3px;
+}
+
+#header {
+  height:270px;
+}
+
+
+  #sidebar.affix-top {
+    position: static;
+    margin-top:0px;
+    width:162px;
+  }
+  
+  #sidebar.affix {
+    position: fixed;
+    top:58px;
+    width:162px;
+  }
+
+
+.affix,.affix-top {
+   position:static;
+}
+
+.scrollSection{
+  height:400px; 
+}
+.admin-control{
+    width: 15%;
+    display: inline;
+    margin-right: 2%;
+    margin-bottom: 2%;
+
+}  
+
+input[type="file"] {
+  display: inline;
+  width: 19%;
+  margin-right: 2%;
+}
+
+.addForm{
+  margin-left: 10%;
+}
+
+.admin-header{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 35px;
+    margin-left: 10%;
+}
+
+#admin-pic{
+  height: 150px;
+  width: 150px;
+  margin-right: 2%;
+}
+
+
+.test{
+  margin-left: -8%;
+  margin-top: 1%;
+}
+
+#inputs{
+  margin-top: -3.4%;
+}

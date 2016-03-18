@@ -34,7 +34,7 @@ export function initialize(application) {
     injectUserService(application, userService);
   }
 
-}
+} 
 
 export default {
 

@@ -5,12 +5,12 @@ export default Base.extend({
  currentUser: null,
 
  
- registerUser(user) 
+ registerUser(user)  
  {
    return this.ajax({
      method: 'POST',
      url: '/v1/registration',
-      data: JSON.stringify(user),
+     data: JSON.stringify(user),
      contentType: "application/json",
      dataType: 'json',
      });//.then(function(response) { return JSON.parse(response.response); });
@@ -35,6 +35,7 @@ export default Base.extend({
     method: 'GET',
     url: '/v1/getCurrentUser'
    });
+
    /*var deferred = Ember.$.Deferred();
 
 debugger;

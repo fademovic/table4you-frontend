@@ -3,31 +3,30 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
-  reservation: Ember.inject.service('reservation-service'),
   init() {
     this._super.apply(this,arguments);
+
   },
-  
-  coordinate: function() {
+   
+ coordinate: function() {
     //var proba=this.get('model')
     //this.get('model') to access model from controller
     return Ember.A([
        {title: this.get('model').name, lat: this.get('model').coordinates.latitude, lng: this.get('model').coordinates.longitude,isInfoWindowVisible: true },
     ]); 
-  }.property(),
+  }.property('model'), //property() ->static jednom se izvrsi i to je to
 
-actions:{
-  myValueDidChange: function() {
+ 
+ actions:{
 
-   this.get('reservation').setReservation({
-    people:this.get("noPeople"),
-    time:this.get("timeReservation"),
-    date:this.get("dateReservation")
- });
+   myValueDidChange: function() {
 
+   localStorage.setItem("people", this.get("noPeople"));
+    localStorage.setItem("time", this.get("timeReservation"));
+    localStorage.setItem("date",this.get("dateReservation"));
+  
    
+},
 }
-
-}
-
+  
 });

@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-
+ 
 export default Ember.Component.extend({  
  ajax: Ember.inject.service('user-service'),
 
@@ -32,7 +32,8 @@ export default Ember.Component.extend({
       }).done(function(response) {
         this.get('ajax').setAccessToken(response.token);
 
-          this.get('ajax').getCurrentUser().done(function(response) {
+          this.get('ajax').getCurrentUser()
+            .done(function(response) {
               this.get('ajax').setCurrentUser(response);
             }.bind(this));
 
@@ -40,9 +41,10 @@ export default Ember.Component.extend({
       .fail(function(response) {
         this.set('error', response.errorMessage);
       }.bind(this));
-  debugger;
+      
+
       $("#noviModal").modal("toggle");
-  
+      
     
 
     },

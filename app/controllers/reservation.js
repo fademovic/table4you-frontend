@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   ajax: Ember.inject.service('restaurants-service'),
-  reservation: Ember.inject.service('reservation-service'),
+  
   
   isReserved:false,
 
@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
     this.set('timeReservation',localStorage.getItem("time"));
     this.set('dateReservation',localStorage.getItem("date"));
  
-  }, 
+  },  
  
   
  actions:{

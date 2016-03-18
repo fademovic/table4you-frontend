@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Component.extend({  
     
   ajax: Ember.inject.service('restaurants-service'),
-  reservation: Ember.inject.service('reservation-service'),
   init() {
     this._super.apply(this,arguments);
     

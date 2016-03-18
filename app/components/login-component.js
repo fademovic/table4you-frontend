@@ -3,9 +3,9 @@ import Ember from 'ember';
 export default Ember.Component.extend({  
   
   ajax: Ember.inject.service('user-service'), 
- 
+  
   actions: 
-  {
+  { 
      
       onLogin: function() {
       
@@ -25,10 +25,10 @@ export default Ember.Component.extend({
       
 
       $("#noviModal").modal("toggle");
-      
+        
 
     }
-
+ 
   }
 
 });
