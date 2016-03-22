@@ -16,6 +16,26 @@ export default Base.extend({
 		 
 		});
 	},
+   
+  completeReservation(reservation,id){
+     
+     return this.ajax({
+     method: 'POST',
+     url: '/v1/restaurants/'+ id + '/reservations',
+     data: JSON.stringify(reservation),
+     contentType: "application/json",
+     dataType: 'json',
+     });
+  },
 
+  addNewRestaurant(restaurant){
+    return this.ajax({
+     method: 'POST',
+     url: '/v1/restaurants',
+     data: JSON.stringify(restaurant),
+     contentType: "application/json",
+     dataType: 'json',
+    });
+  }
 
 });

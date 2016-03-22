@@ -8,13 +8,10 @@ export default Ember.Service.extend({
 
   init: function(argument) {
   this._super.apply(this, arguments);
-debugger;
   this.set('authToken', localStorage.getItem('USER-ACCESS-TOKEN'));
-  debugger;
   },  
  
   ajax: function(options) {
-    debugger;
     var self=this;
     var params = {}
    
@@ -28,13 +25,11 @@ debugger;
    }
    
     return Ember.$.ajax(params);
- debugger;
   },
 
   setAccessToken: function(authToken)
   {
     this.set('authToken', authToken);
-    debugger;
     window.localStorage.setItem('USER-ACCESS-TOKEN', authToken);
   }
 

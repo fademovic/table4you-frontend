@@ -2,7 +2,9 @@
 <header class="header">
  <div class="container">
 	<!--naslov -->
-  <div class="navbar-brand">Table4You</div>  
+  {{#link-to 'index'}}
+  <div class="navbar-brand">Table4You</div>
+  {{/link-to}}  
    <div align="right" class="navbar-btn">
   
     {{#unless userService.currentUser}}

@@ -18,6 +18,15 @@ export default Ember.Controller.extend({
   
  actions:{
   complete: function () {
+    alert(this.get("note"));
+    this.get('ajax').completeReservation({
+          guestCount: this.get("noPeople"), 
+          dateTime:  this.get("dateReservation") + " " + this.get("timeReservation"),          
+          message: this.get("note")     
+      },this.get('model').restaurantId).fail(function(response) {
+        this.set('error', response.errorMessage);
+      }.bind(this));
+
     this.set('isReserved',true);
   }
  }

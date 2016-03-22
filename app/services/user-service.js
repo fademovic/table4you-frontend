@@ -36,26 +36,6 @@ export default Base.extend({
     url: '/v1/getCurrentUser'
    });
 
-   /*var deferred = Ember.$.Deferred();
-
-debugger;
-deferred.resolve({
-    firstName:'Fadil',
-    lastName:'Ademovic',
-    email:'fadil.ademovic@gmail.com',
-    phone:123456,
-    password:123456,
-    passwordConfirmation:123456,
-    address:{
-    city:'Sarajevo',
-    country:'BiH',
-    streetName:'Ulica'
-     },
-    gender:"male",
-    birthdate:"16/01/1994"
-    });
-
- return deferred.promise();*/
  },
  
  setCurrentUser(user)

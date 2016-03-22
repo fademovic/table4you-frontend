@@ -414,6 +414,18 @@ input[type="file"] {
 
 .addForm{
   margin-left: 10%;
+  margin-bottom: 3%;
+}
+
+.editForm{
+  margin-left: 10%;
+  margin-bottom: 3%;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  width: 80%;
+  padding-top: 1.5%;
+  padding-left: 1%;
 }
 
 .admin-header{
@@ -424,17 +436,78 @@ input[type="file"] {
 }
 
 #admin-pic{
-  height: 150px;
-  width: 150px;
-  margin-right: 2%;
+      height: 50px;
+    width: 50px;
+    margin-right: 2%;
+    margin-top: -0.7%;
+    margin-left: 1.5%;
 }
 
 
-.test{
-  margin-left: -8%;
+#editButton{
+  margin-left: -9%;
   margin-top: 1%;
 }
 
 #inputs{
-  margin-top: -3.4%;
+  margin-left: 8%;
+  width: 104%;
+  margin-bottom: 1.5%;
+}
+
+.close{
+  margin-left: -1%;
+    margin-top: -1.6%;
+    margin-right: 1%;
+}
+
+.parInline{
+  display: inline;
+  text-align: left;
+}
+
+.label-position{
+      margin-left: 1%;
+    margin-right: 12%;
+}
+
+.label-position1{
+      margin-left: 1%;
+    margin-right: 12%;
+}
+
+.label-position2{
+    margin-left: 1%;
+    margin-right: 12%;
+}
+
+.label-position3{
+    margin-left: 1%;
+    margin-right: 12%;
+}
+
+.btn-primary1{
+  width: 8%;
+}
+
+.btn-danger{ 
+  width: 10%;
+}
+
+#save{
+  margin-top: 17%;
+}
+
+.btn-warning{
+ width: 44%;
+ margin-right: 5%;
+}
+
+.btn-default{
+ width: 44%;
+  margin-left: 5%;
+}
+
+#confirmButtons{
+  margin-top: 2%;
 }
