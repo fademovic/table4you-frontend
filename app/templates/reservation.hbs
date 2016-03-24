@@ -21,26 +21,26 @@
     </div>
 
      <div class=" other-position">
-       <div class="col-md-1">
+       <div class="col-md-2">
        <label class="people">People:</label> 
-        {{input type="number" class="form-control" id="people" min="1" max="10" value=noPeople }}
+        {{input type="number" class="form-control" id="peopleInput" min="1" max="10" value=noPeople }}
        </div>
-      </div>  
+       
 
-     <div class="">
+    
        <div class="col-md-2">
        <label>Time of reservation:</label>
         {{input type="time" class="form-control" id="time"  value=timeReservation}}
        </div>
-      </div>
+      
       
 
-     <div class="">
+     
        <div class="col-md-2">
        <label>Date of reservation:</label>
-        {{input type="date" class="form-control" id="date" min="2016-01-01" value=dateReservation}}
+        {{input type="date" class="form-control" id="date-input" min="2016-01-01" value=dateReservation}}
        </div>
-      </div>        
+           
 
       <div class="col-md-2">
        <label>Note:</label>
@@ -53,7 +53,7 @@
      {{model.name}}
      {{/link-to}}   
      </div>
-  
+  </div>
 </div>
 
 <div class="col-md-12 complete-button" align="right">  

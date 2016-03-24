@@ -21,9 +21,9 @@
   <label class="label-position3">Working Hours</label><br>
   <p class="parInline label-position3"> {{hours}}</p>
   </div>
-
+ 
   <button class="btn btn-primary btn-primary1" data-toggle="collapse" href= "#{{idColapse}}">Edit</button>
-  <button class="btn btn-danger" data-toggle="modal" data-target="#alertModal" {{action 'deleteChanges'}}>Delete</button>
+  <button class="btn btn-danger" {{action 'deleteChanges'}}>Delete</button>
   </div>
     <div id={{idColapse}} class="panel-collapse collapse">
         <div class="panel-body row">
@@ -84,7 +84,7 @@
          </div>
   
            <div class="col-md-2">
-            <button class="btn btn-success" id="save" data-toggle="modal" data-target="#alertModal" {{action 'saveChanges'}}>Save changes</button>
+            <button class="btn btn-success" id="save" {{action 'saveChanges'}}>Save changes</button>
            </div>
         </div>
   </div>

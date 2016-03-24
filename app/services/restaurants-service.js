@@ -36,6 +36,29 @@ export default Base.extend({
      contentType: "application/json",
      dataType: 'json',
     });
+  },
+
+  rate(message,rating,id)
+  {
+  return this.ajax({
+   method: 'POST',
+   url: '/v1/restaurants/'+ id + '/reviews',
+   data:JSON.stringify({text:message,rating:rating}),
+   contentType: "application/json",
+   dataType: 'json',
+ });
+  },
+
+  updateRestaurant(restaurant,id)
+  {
+    return this.ajax({
+     method: 'PUT',
+     url: '/v1/restaurants/'+id,
+     data: JSON.stringify(restaurant),
+     contentType: "application/json",
+     dataType: 'json',
+    });
   }
+
 
 });

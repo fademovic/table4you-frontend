@@ -20,7 +20,7 @@
      
      <div class="scrollSection" id="section2">    
       <h1>About</h1>
-      Četrdeset mi je godina ružno doba: čovjek je još mlad kako bi imao želja, a već star da ih ostvaruje. Šteta što nemam deset godina više pa bi me starost čuvala od pobuna ili deset godina manje pa bi mi bilo svejedno. Jer trideset godina je mladost, to sad mislim, kad sam se nepovratno udaljio od nje, mladost koja se ničega ne boji, pa ni sebe.
+      {{model.deals}}
      </div>
       
      <div class="scrollSection" id="section3">   
@@ -29,16 +29,22 @@
       
       <div class="col-md-7 hidden-sm hidden-xs">
       
-      <label class="postionLabel1">People:</label> <label class="postionLabel2">Time of reservation:</label><label class="postionLabel3">Date of reservation:</label><br>
-      
-      {{input type="number" class="form-control" id="peopleIndex1" min="1" max="10" value=noPeople}}
-       
-      
-      {{input type="time" class="form-control" id="timeIndex1"  value=timeReservation}}
-      
+      <div class="col-md-3">
+       <label class="people">People:</label> 
+        {{input type="number" class="form-control" min="1" max="10" value=noPeople}}
+       </div>
 
-      {{input type="date" class="form-control" id="dateIndex1" min="2016-01-01" value=dateReservation}}
-      </div>
+       <div class="col-md-4">
+       <label class="people">Time of reservation:</label> 
+        {{input type="time" class="form-control"  value=timeReservation}}
+       </div>
+
+       <div class="col-md-5">
+       <label class="people">Date of reservation:</label> 
+        {{input type="date" class="form-control" min="2016-01-01" value=dateReservation}}
+       </div>
+
+       </div>
 
        <div class="col-md-2 hidden-sm hidden-xs">
        <label>Restaurant:</label><br>
@@ -51,7 +57,22 @@
          {{/link-to}}
          </div>
 
-     </div>  
+     </div> 
+
+    <div class="scrollSection" id="section4">    
+      <h1>Rate us</h1>
+      <div class="rate">
+  
+        <span id="span5" {{action 'rate1'}}>☆</span>
+        <span id="span4" {{action 'rate2'}}>☆</span>
+        <span id="span3" {{action 'rate3'}}>☆</span>
+        <span id="span2" {{action 'rate4'}}>☆</span>
+        <span id="span1" {{action 'rate5'}}>☆</span>
+ 
+      </div>
+       <label class="rate-label" ></label>
+     </div>
+
     </div>
   </div>
 </div>

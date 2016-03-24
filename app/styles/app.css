@@ -139,47 +139,8 @@ body {
 {
   font-size: 200%;
   color: white;
-  top:10px;
-  padding-left: 40px;
-  padding-right: 10px;
-
 }
 
-#peopleIndex{
-  width: 7%;
-  display: inline;
-}
-
-#timeIndex{
-   width: 13%;
-  display: inline;
-}
-
-#dateIndex{
-  width: 17%;
-  display: inline;
-}
-
-
-#peopleIndex1{
-  width: 15%;
-  display: inline;
-  margin-right: 40px;
-}
-
-#timeIndex1{
-   width: 25%;
-  display: inline;
-  margin-left: 20px;
-  margin-right: 40px;
-}
-
-#dateIndex1{
-  width: 30%;
-  display: inline;
-  margin-left: 20px;
-  margin-right: 20px;
-}
 
 #resMake{
   margin-top: 25px;
@@ -210,15 +171,9 @@ body {
   display: inline;
 }
 
-.selectize-control {
-    position: absolute;
-    width: 20%;
-    display: inline;
-    padding-top: 4px;
-}
 
 #makeButton{
-  margin-top: 4px;
+  margin-top: 1px;
 }
 
 .glyphicon-chevron-left
@@ -249,7 +204,7 @@ body {
 
 .center {
     margin: auto;
-    width: 40%;
+    width: 60%;
     
 }
 
@@ -291,7 +246,7 @@ body {
 .reservation-pading
 {
     padding-top: 25px;
-    padding-right: 0px;
+    padding-right: 0px; 
     padding-bottom: 0px;
     padding-left: 50px;
 }
@@ -510,4 +465,39 @@ input[type="file"] {
 
 #confirmButtons{
   margin-top: 2%;
+}
+
+.star{
+  font-size: 23px;
+}
+
+.rate {
+  unicode-bidi: bidi-override;
+  direction: ltr;
+  margin-right: 69%;
+  transform: rotate(180deg);
+}
+.rate > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+  font-size: 50px;
+  transform: rotate(36deg);
+}
+.rate > span:hover:before,
+.rate > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   color:gold;
+   direction: rtl;
+}
+
+.rate-label{
+  color: gray;
+  margin-left: 2%;
+}
+
+.position-reserve{
+  margin-left: -3%;
+  margin-right: 6%;
 }

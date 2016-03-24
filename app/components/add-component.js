@@ -7,7 +7,7 @@ export default Ember.Component.extend({
 
   actions:{
   addRestaurant: function () {
-    this.get('ajax').addNewRestaurant({
+    this.get('ajax').addNewRestaurant({ 
     name : this.get('name'),
     address : {
     streetName : this.get('street'),

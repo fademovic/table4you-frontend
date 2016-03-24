@@ -1,28 +1,56 @@
- <div class="row dnoJumbotrona">
-
-  <div class="col-md-10 hidden-sm hidden-xs">
-   
-   <span class="glyphiconStyle glyphicon glyphicon-user"></span>
-    {{input type="number" class="form-control" id="peopleIndex" min="1" max="10" value=noPeople}}
-
-   <span class="glyphiconStyle glyphicon glyphicon-time"></span>
-   {{input type="time" class="form-control" id="timeIndex" value=timeReservation}}
-    
-   <span class="glyphiconStyle glyphicon glyphicon-calendar"></span>
-   {{input type="date" class="form-control" id="dateIndex" min="2016-01-01" value=dateReservation}}
-   
-   
-   <span class="glyphiconStyle glyphicon glyphicon-cutlery"></span>
-   {{ember-selectize  content=restaurants placeholder="Select restaurant" optionValuePath="content.restaurantId" optionLabelPath="content.name" value=restaurantReservation }}
-  
-  </div>
-      
-  <div class="col-md-2">
+<div class="row dnoJumbotrona position-reserve">
+ 
+ 
+     <div class="col-md-2">
+       <div class="row">
+        <div class="col-md-3">
+         <span class="glyphiconStyle glyphicon glyphicon-user "></span>
+        </div>
+        <div class="col-md-8">
+         {{input type="number" class="form-control"  min="1" max="10" value=noPeople}}
+        </div>
+       </div>
+     </div>
+ 
+     <div class="col-md-3">
+       <div class="row">
+        <div class="col-md-2">
+         <span class="glyphiconStyle glyphicon glyphicon-calendar"></span>
+        </div>
+        <div class="col-md-8">
+        {{input type="date" class="form-control"  min="2016-01-01" value=dateReservation}}
+        </div>
+       </div>
+     </div>
+       
+   <div class="col-md-3">
+       <div class="row">
+        <div class="col-md-2">
+         <span class="glyphiconStyle glyphicon glyphicon-time"></span>
+        </div>
+        <div class="col-md-8">
+        {{input type="time" class="form-control"  value=timeReservation}}
+        </div>
+       </div>
+     </div>
+           
+     <div class="col-md-3">
+       <div class="row">
+        <div class="col-md-2">
+         <span class="glyphiconStyle glyphicon glyphicon-cutlery"></span>
+        </div>
+        <div class="col-md-9">
+       {{ember-selectize  content=restaurants placeholder="Select restaurant" optionValuePath="content.restaurantId" optionLabelPath="content.name" value=restaurantReservation }}
+         </div>
+       </div>
+     </div>
+ 
+ 
+      <div class="col-md-1">
    {{#link-to 'reservation' id}}
      <button type="submit" class="btn btn-primary" {{action 'myValueDidChange'}} id="makeButton">Make Reservation</button>
    {{/link-to}}
   </div>
- 
-</div> 
-
+    
+ </div>
 {{yield}}
