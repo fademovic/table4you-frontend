@@ -13,33 +13,33 @@ export default Base.extend({
 		return this.ajax({
 			method: 'GET',
 			url: '/v1/restaurants/' + id,
-		 
+     
 		});
 	},
-   
+ 
   completeReservation(reservation,id){
-     
-     return this.ajax({
+   
+   return this.ajax({
      method: 'POST',
      url: '/v1/restaurants/'+ id + '/reservations',
      data: JSON.stringify(reservation),
      contentType: "application/json",
      dataType: 'json',
-     });
-  },
+   });
+ },
 
-  addNewRestaurant(restaurant){
-    return this.ajax({
-     method: 'POST',
-     url: '/v1/restaurants',
-     data: JSON.stringify(restaurant),
-     contentType: "application/json",
-     dataType: 'json',
-    });
-  },
+ addNewRestaurant(restaurant){
+  return this.ajax({
+   method: 'POST',
+   url: '/v1/restaurants',
+   data: JSON.stringify(restaurant),
+   contentType: "application/json",
+   dataType: 'json',
+ });
+},
 
-  rate(message,rating,id)
-  {
+rate(message,rating,id)
+{
   return this.ajax({
    method: 'POST',
    url: '/v1/restaurants/'+ id + '/reviews',
@@ -47,18 +47,26 @@ export default Base.extend({
    contentType: "application/json",
    dataType: 'json',
  });
-  },
+},
 
-  updateRestaurant(restaurant,id)
-  {
-    return this.ajax({
-     method: 'PUT',
-     url: '/v1/restaurants/'+id,
-     data: JSON.stringify(restaurant),
-     contentType: "application/json",
-     dataType: 'json',
-    });
-  }
+updateRestaurant(restaurant,id)
+{
+  return this.ajax({
+   method: 'PUT',
+   url: '/v1/restaurants/'+id,
+   data: JSON.stringify(restaurant),
+   contentType: "application/json",
+   dataType: 'json',
+ });
+},
+
+deleteRestaurant(id)
+{
+  return this.ajax({
+    method: 'DELETE',
+    url: '/v1/restaurants/'+id,
+  })
+}
 
 
 });

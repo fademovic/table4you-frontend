@@ -1,11 +1,11 @@
 <div class="container-fluid" id="header">
  <div>
   <img src={{model.image}} alt="restoran" class="restaurant-pic"  >
-   <h2 id="restaurantTitle"><span>{{model.name}}</span></h2>
-   <div id="ratingPic">
+  <h2 id="restaurantTitle"><span>{{model.name}}</span></h2>
+  <div id="ratingPic">
     {{star-component rating=model.rating }}
-   </div>
- </div>
+  </div>
+</div>
 </div>
 <br>
 
@@ -15,67 +15,73 @@
     
     <div class="col-md-10 col-sm-9 col-xs-9">   
       <div class="scrollSection" id="section1">
-     {{google-map  zoom=15 type='map'  markers=coordinate  }}
+       {{google-map  zoom=15 type='map'  markers=coordinate  }}
      </div>
      
      <div class="scrollSection" id="section2">    
       <h1>About</h1>
       {{model.deals}}
-     </div>
-      
-     <div class="scrollSection" id="section3">   
+
+      A smart fish restaurant for a smart neighbourhood: you can’t fault the concept. But though a recent meal set sail beautifully, it wasn’t all entirely shipshape.
+
+      First up, the best bits. The cocktails are great. I mean, truly brilliant. A bubbling prosecco-based Volcano was not only laced with peach bitters, but had a sphere of blood orange sorbet bobbing on its surface: it’s the poshest ice-cream float in London. A Wuyi old fashioned, made with lapsang infused bourbon, was not only deliciously smoky, but had a precision-crimped orange peel garnish fixed to the glass with – of course – a doll’s house-sized clothes peg. As for the food, it started just as well. There was a crispy tempura oyster ‘snack’, served prettily on its shell, ahead of tender octopus and moreish chorizo over a white bean puree. An unexpected highlight was the Galley fish stew: a far cry from its humble origins, it had depth, piquancy and generous chunks of both fish and shellfish. Not to mention croutons and a silky served-on-the-side garlic aioli. Fish stew: take a bow.
+
+      But then things then started going off-course. Lobster pappardelle and pan-fried seabass with gnocchi were pleasant enough, but their thin sauces lacked oomph. A side of broccoli was overcooked. A salted caramel tart featured thick, lifeless pastry and a filling that was neither sweet nor salty, just heavy. Meanwhile, as the stylish space started filling up, it became clear how cramped the tables are: one couple visibly flinched when being offered the last seats, wedged in so close to their neighbours they may as well have sat on their laps. Then there was the music: extended club remixes that were more ‘naff suburban club’ than ‘trendy Islington hangout’.
+    </div>
+    
+    <div class="scrollSection" id="section3">   
       
       <h1>Reservation</h1>
       
       <div class="col-md-7 hidden-sm hidden-xs">
-      
-      <div class="col-md-3">
-       <label class="people">People:</label> 
-        {{input type="number" class="form-control" min="1" max="10" value=noPeople}}
+        
+        <div class="col-md-3">
+         <label class="people">People:</label> 
+         {{input type="number" class="form-control" min="1" max="10" value=noPeople}}
        </div>
 
        <div class="col-md-4">
-       <label class="people">Time of reservation:</label> 
-        {{input type="time" class="form-control"  value=timeReservation}}
+         <label class="people">Time of reservation:</label> 
+         {{input type="time" class="form-control"  value=timeReservation}}
        </div>
 
        <div class="col-md-5">
-       <label class="people">Date of reservation:</label> 
-        {{input type="date" class="form-control" min="2016-01-01" value=dateReservation}}
+         <label class="people">Date of reservation:</label> 
+         {{input type="date" class="form-control" min="2016-01-01" value=dateReservation}}
        </div>
 
-       </div>
-
-       <div class="col-md-2 hidden-sm hidden-xs">
-       <label>Restaurant:</label><br>
-       <p id="resName">{{model.name}}</p>
-       </div>
-       
-         <div class="col-md-2  col-sm-3 col-xs-3">
-         {{#link-to 'reservation' model.restaurantId}}
-          <button type="submit" class="btn btn-primary" {{action 'myValueDidChange'}} id="resMake">Make Reservation</button>
-         {{/link-to}}
-         </div>
-
-     </div> 
-
-    <div class="scrollSection" id="section4">    
-      <h1>Rate us</h1>
-      <div class="rate">
-  
-        <span id="span5" {{action 'rate1'}}>☆</span>
-        <span id="span4" {{action 'rate2'}}>☆</span>
-        <span id="span3" {{action 'rate3'}}>☆</span>
-        <span id="span2" {{action 'rate4'}}>☆</span>
-        <span id="span1" {{action 'rate5'}}>☆</span>
- 
-      </div>
-       <label class="rate-label" ></label>
      </div>
 
+     <div class="col-md-2 hidden-sm hidden-xs">
+       <label>Restaurant:</label><br>
+       <p id="resName">{{model.name}}</p>
+     </div>
+     
+     <div class="col-md-2  col-sm-3 col-xs-3">
+       {{#link-to 'reservation' model.restaurantId}}
+       <button type="submit" class="btn btn-primary" {{action 'myValueDidChange'}} id="resMake">Make Reservation</button>
+       {{/link-to}}
+     </div>
+
+   </div> 
+
+   <div class="scrollSection" id="section4">    
+    <h1>Rate us</h1>
+    <div class="rate">
+      
+      <span id="span5" {{action 'rate1'}}>☆</span>
+      <span id="span4" {{action 'rate2'}}>☆</span>
+      <span id="span3" {{action 'rate3'}}>☆</span>
+      <span id="span2" {{action 'rate4'}}>☆</span>
+      <span id="span1" {{action 'rate5'}}>☆</span>
+      
     </div>
+    <label class="rate-label" ></label>
   </div>
+
+</div>
+</div>
 </div>
 
 
-                                
+

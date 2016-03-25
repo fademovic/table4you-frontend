@@ -1,34 +1,34 @@
     <!--Header -->
-<header class="header">
- <div class="container">
-	<!--naslov -->
-  {{#link-to 'index'}}
-  <div class="navbar-brand">Table4You</div>
-  {{/link-to}}  
-   <div align="right" class="navbar-btn">
-  
-    {{#unless userService.currentUser}}
-     <button id="signUp" data-toggle="modal" class="btn btn-success" data-target="#noviModal" {{action "activeRegistration"}}>SignUp</button>
-      <a href="#" id="login" data-toggle="modal" data-target="#noviModal" {{action "activeLogin"}}>Login</a>
-    {{else}}
-     {{userService.currentUser.firstName}}  <a href="" {{action 'logout'}}>Logout</a>
-   
-    {{/unless}}
+    <header class="header">
+     <div class="container">
+       <!--naslov -->
+       {{#link-to 'index'}}
+       <div class="navbar-brand">Table4You</div>
+       {{/link-to}}  
+       <div align="right" class="navbar-btn">
+        
+        {{#unless userService.currentUser}}
+        <button id="signUp" data-toggle="modal" class="btn btn-success" data-target="#noviModal" {{action "activeRegistration"}}>SignUp</button>
+        <a href="#" id="login" data-toggle="modal" data-target="#noviModal" {{action "activeLogin"}}>Login</a>
+        {{else}}
+        {{userService.currentUser.firstName}}  <a href="" {{action 'logout'}}>Logout</a>
+         
+        {{/unless}}
 
-  </div> 
- </div>
-</header>
-
-
-<!--footer  -->
-<footer class="footer">
-
-  <p class="fooPar">Copyright info <a href="#" class="fooPar">Link negdje</a> </p> 
-
-</footer> 
+      </div> 
+    </div>
+  </header>
 
 
-{{modal-component activeReg=reg activeLog=log }}
+  <!--footer  -->
+  <footer class="footer">
+
+    <p class="fooPar">Copyright info <a href="#" class="fooPar">Link negdje</a> </p> 
+
+  </footer> 
 
 
-{{outlet}}
+  {{modal-component activeReg=reg activeLog=log }}
+
+
+  {{outlet}}

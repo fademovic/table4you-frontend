@@ -31,22 +31,22 @@ body {
 }
 
 .restaurant-pic{
-    width:100%;
-    max-height:250px;
+  width:100%;
+  max-height:250px;
 }
 
 .pic-animation 
 {
-    background: url('/assets/images/moving2.jpg') no-repeat center; 
-    width:100%;
-    max-height:250px;
-    margin-bottom: 20px;
-    
+  background: url('/assets/images/moving2.jpg') no-repeat center; 
+  width:100%;
+  max-height:250px;
+  margin-bottom: 20px;
+
 
   animation-name: slidein;
   animation-duration: 100s;
   animation-iteration-count: infinite; 
- 
+
 }
 
 /*@-webkit-keyframes chrome, inace @keyframes*/
@@ -54,32 +54,32 @@ body {
   from {
     background-position: center }
 
-  to {
-    background-position: top right}
-     0%  {background-position: 50% 50%}
-    10%  {background-position: 25% 25%}
-    20%  {background-position: 75% 25%}
-    30%  {background-position: 25% 75%}
-    40%  {background-position: 75% 75%}
-    50%  {background-position: 50% 50%}
-    60%  {background-position: 75% 25%}
-    70%  {background-position: 25% 25%}
-    80%  {background-position: 75% 75%}
-    90%  {background-position: 25% 75%}
-   100%  {background-position: 50% 50%}
+    to {
+      background-position: top right}
+      0%  {background-position: 50% 50%}
+      10%  {background-position: 25% 25%}
+      20%  {background-position: 75% 25%}
+      30%  {background-position: 25% 75%}
+      40%  {background-position: 75% 75%}
+      50%  {background-position: 50% 50%}
+      60%  {background-position: 75% 25%}
+      70%  {background-position: 25% 25%}
+      80%  {background-position: 75% 75%}
+      90%  {background-position: 25% 75%}
+      100%  {background-position: 50% 50%}
 
-}
-}
+    }
+  }
 
-.margineSlike 
-{
- margin: 0px 0px 0px 30px;
-}
+  .margineSlike 
+  {
+   margin: 0px 0px 0px 30px;
+ }
 
 
 
-.dnoJumbotrona
-{
+ .dnoJumbotrona
+ {
   /*zavisi od velicine jumbotrona*/
   margin-top: 130px;
 }
@@ -93,8 +93,8 @@ body {
 
 .velicinaSlike
 {
-   height: 200px;
-   width: 200px;
+ height: 200px;
+ width: 200px;
 
 
 }
@@ -112,21 +112,21 @@ body {
 
 .horizontal-slider
 {
-    float:left;
-    width: 100%;
-    overflow: auto;
-    white-space: nowrap;
-    margin-bottom: 2%;
-    overflow-y:hidden;
-    overflow-x:hidden;
+  float:left;
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  margin-bottom: 2%;
+  overflow-y:hidden;
+  overflow-x:hidden;
 }
 
 .celija {
-    display: inline-block;
-    width: 200px;
-    height: 300px;
-    margin-right: 10px;
-    
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+  margin-right: 10px;
+
 
 }
 
@@ -203,9 +203,9 @@ body {
 
 
 .center {
-    margin: auto;
-    width: 60%;
-    
+  margin: auto;
+  width: 60%;
+
 }
 
 .reservation-center{
@@ -216,7 +216,7 @@ body {
 
 /* Center the loader */
 #loader {
- 
+
   border: 16px solid #f3f3f3;
   border-radius: 50%;
   border-top: 16px solid #3498db;
@@ -236,19 +236,19 @@ body {
 }
 
 #reservationBorder{
-  
+
   border: 2px solid gray;
   border-radius: 20px;
   height: 200px;
-    
+
 }
 
 .reservation-pading
 {
-    padding-top: 25px;
-    padding-right: 0px; 
-    padding-bottom: 0px;
-    padding-left: 50px;
+  padding-top: 25px;
+  padding-right: 0px; 
+  padding-bottom: 0px;
+  padding-left: 50px;
 }
 
 .reservation-position{
@@ -264,16 +264,14 @@ body {
 }
 
 .alert {
-    padding: 12px;
-    padding-left: 178px;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    height: 70px;
-    width: 760px;
-    margin-top: 5%;
-    padding-top: 17px;
-    font-size: 24px;
-    margin-left: 20%;
+  
+  
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding-left: 19%;
+  margin-top: 2%;
+  font-size: 170%;
+  margin-left: 16%;
 }
 
 .reservation-title{
@@ -283,48 +281,48 @@ body {
 #restaurantTitle{
   color:white;
   position: absolute; 
-   top: 200px; 
-   left: 0;
-   margin-left: 50px; 
-   
+  top: 200px; 
+  left: 0;
+  margin-left: 50px; 
+
 }
 
 #ratingPic{
   position: absolute; 
-   top: 270px; 
-   left: 0;
-   margin-left: 55px; 
+  top: 270px; 
+  left: 0;
+  margin-left: 55px; 
 }
 
 h2 span { 
-   color: white; 
-   font: bold 24px/45px Helvetica, Sans-Serif; 
-   letter-spacing: -1px;  
-   background: rgb(0, 0, 0); /* fallback color */
-   background: rgba(0, 0, 0, 0.7);
-   padding: 10px; 
+ color: white; 
+ font: bold 24px/45px Helvetica, Sans-Serif; 
+ letter-spacing: -1px;  
+ background: rgb(0, 0, 0); /* fallback color */
+ background: rgba(0, 0, 0, 0.7);
+ padding: 10px; 
 }
 
 #map {
-        width: 100%;
-        height: 250px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-      }
+  width: 100%;
+  height: 250px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
 .map-canvas {
   height: 400px;
 }
 
 
- 
 
-  h1{
-    margin-bottom: 30px;
-    margin-top: 30px;
-  }
 
-  #all{
+h1{
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+#all{
   margin-top: -3px;
 }
 
@@ -333,31 +331,31 @@ h2 span {
 }
 
 
-  #sidebar.affix-top {
-    position: static;
-    margin-top:0px;
-    width:162px;
-  }
-  
-  #sidebar.affix {
-    position: fixed;
-    top:58px;
-    width:162px;
-  }
+#sidebar.affix-top {
+  position: static;
+  margin-top:0px;
+  width:162px;
+}
+
+#sidebar.affix {
+  position: fixed;
+  top:58px;
+  width:162px;
+}
 
 
 .affix,.affix-top {
-   position:static;
+ position:static;
 }
 
 .scrollSection{
   height:400px; 
 }
 .admin-control{
-    width: 15%;
-    display: inline;
-    margin-right: 2%;
-    margin-bottom: 2%;
+  width: 15%;
+  display: inline;
+  margin-right: 2%;
+  margin-bottom: 2%;
 
 }  
 
@@ -384,18 +382,18 @@ input[type="file"] {
 }
 
 .admin-header{
-    margin-bottom: 30px;
-    margin-top: 30px;
-    font-size: 35px;
-    margin-left: 10%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 35px;
+  margin-left: 10%;
 }
 
 #admin-pic{
-      height: 50px;
-    width: 50px;
-    margin-right: 2%;
-    margin-top: -0.7%;
-    margin-left: 1.5%;
+  height: 50px;
+  width: 50px;
+  margin-right: 2%;
+  margin-top: -0.7%;
+  margin-left: 1.5%;
 }
 
 
@@ -412,8 +410,8 @@ input[type="file"] {
 
 .close{
   margin-left: -1%;
-    margin-top: -1.6%;
-    margin-right: 1%;
+  margin-top: -1.6%;
+  margin-right: 1%;
 }
 
 .parInline{
@@ -422,23 +420,23 @@ input[type="file"] {
 }
 
 .label-position{
-      margin-left: 1%;
-    margin-right: 12%;
+  margin-left: 1%;
+  margin-right: 12%;
 }
 
 .label-position1{
-      margin-left: 1%;
-    margin-right: 12%;
+  margin-left: 1%;
+  margin-right: 12%;
 }
 
 .label-position2{
-    margin-left: 1%;
-    margin-right: 12%;
+  margin-left: 1%;
+  margin-right: 12%;
 }
 
 .label-position3{
-    margin-left: 1%;
-    margin-right: 12%;
+  margin-left: 1%;
+  margin-right: 12%;
 }
 
 .btn-primary1{
@@ -460,7 +458,7 @@ input[type="file"] {
 
 .btn-default{
  width: 44%;
-  margin-left: 5%;
+ margin-left: 5%;
 }
 
 #confirmButtons{
@@ -486,10 +484,10 @@ input[type="file"] {
 }
 .rate > span:hover:before,
 .rate > span:hover ~ span:before {
-   content: "\2605";
-   position: absolute;
-   color:gold;
-   direction: rtl;
+ content: "\2605";
+ position: absolute;
+ color:gold;
+ direction: rtl;
 }
 
 .rate-label{
@@ -500,4 +498,11 @@ input[type="file"] {
 .position-reserve{
   margin-left: -3%;
   margin-right: 6%;
+}
+
+
+#backHome{
+    margin-top: 9%;
+    margin-left: 16%;
+    margin-bottom: 3%;
 }

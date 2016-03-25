@@ -1,34 +1,34 @@
 {{#if isLoading}}
-  <div id="loader" class="center"></div><br><br> 
+<div id="loader" class="center"></div><br><br> 
 {{else}}
 <div class="index-component container " id="sliderComponent" >
  <div class="row">
   <div class="col-md-11 col-xs-9">
-	 <label>{{title}}</label>   
+    <label>{{title}}</label>   
     <a href="#">See All</a>
-	</div>
-	<!--lijeve i desne kontrole-->  
+  </div>
+  <!--lijeve i desne kontrole-->  
   <div class="col-md-1 col-xs-3">
-	 <a  class="glyphicon glyphicon-chevron-left" role="button" {{action 'leftSlide'}}></a> 
+    <a  class="glyphicon glyphicon-chevron-left" role="button" {{action 'leftSlide'}}></a> 
     <a  class="glyphicon glyphicon-chevron-right" role="button" {{action 'rightSlide'}}></a> 
   </div> 
- </div>
+</div>
 
- <div class="row horizontal-slider" > 
+<div class="row horizontal-slider" > 
   {{#each restaurants as |singleRestaurant| }}
-   <div class="celija">
+  <div class="celija">
     {{#link-to "restaurants" singleRestaurant.restaurantId }}
-		 <img src={{singleRestaurant.image}} alt="restoran" class="img-rounded velicinaSlike" />
-	  {{/link-to}}
-	   <p  class="ime">{{singleRestaurant.name}}</p>
-	    <p  class="adresa">{{singleRestaurant.address.streetName}}</p>
-   <div class="center">
-    {{star-component rating=singleRestaurant.rating }}
+    <img src={{singleRestaurant.image}} alt="restoran" class="img-rounded velicinaSlike" />
+    {{/link-to}}
+    <p  class="ime">{{singleRestaurant.name}}</p>
+    <p  class="adresa">{{singleRestaurant.address.streetName}}</p>
+    <div class="center">
+      {{star-component rating=singleRestaurant.rating }}
     </div>
-   </div>
+  </div>
   {{/each}}
- </div>     
- 
+</div>     
+
 </div>
 {{/if}}
 

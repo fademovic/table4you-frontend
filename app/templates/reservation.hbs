@@ -1,63 +1,70 @@
 {{#if isReserved}}
- <div class="alert alert-success col-md-8" >
-    <strong>Success!</strong> Reservation completed.
-   </div>
-   {{else}}
+<div class="alert alert-success col-md-8" >
+  <strong>Success!</strong> Reservation completed.
+</div>
+<div id="backHome">
+  {{#link-to "index"}}Back to Home{{/link-to}}
+</div>
+
+{{slider-component title="Other restaurants you may like "}}
+
+
+{{else}}
 <div class="reservation-position container">
  <div class="row">
   
   <div class="col-md-4">
    <h3 class="reservation-title">Complete your reservation</h3>
-  </div>
+ </div>
  
-  </div>
+</div>
 
-   <div id="reservationBorder" class="reservation-pading" > 
-    
-    <div class="col-md-2">
-     {{#link-to "restaurants" model.restaurantId }}
-      <img src={{model.image}} alt="restoran" class="img-rounded reservationPic"  align="left">
-     {{/link-to}}
-    </div>
+<div id="reservationBorder" class="reservation-pading" > 
+  
+  <div class="col-md-2">
+   {{#link-to "restaurants" model.restaurantId }}
+   <img src={{model.image}} alt="restoran" class="img-rounded reservationPic"  align="left">
+   {{/link-to}}
+ </div>
 
-     <div class=" other-position">
-       <div class="col-md-2">
-       <label class="people">People:</label> 
-        {{input type="number" class="form-control" id="peopleInput" min="1" max="10" value=noPeople }}
-       </div>
-       
+ <div class=" other-position">
+   <div class="col-md-2">
+     <label class="people">People:</label> 
+     {{input type="number" class="form-control" id="peopleInput" min="1" max="10" value=noPeople }}
+   </div>
+   
 
-    
-       <div class="col-md-2">
-       <label>Time of reservation:</label>
-        {{input type="time" class="form-control" id="time"  value=timeReservation}}
-       </div>
-      
-      
+   
+   <div class="col-md-2">
+     <label>Time of reservation:</label>
+     {{input type="time" class="form-control" id="time"  value=timeReservation}}
+   </div>
+   
+   
 
-     
-       <div class="col-md-2">
-       <label>Date of reservation:</label>
-        {{input type="date" class="form-control" id="date-input" min="2016-01-01" value=dateReservation}}
-       </div>
-           
+   
+   <div class="col-md-2">
+     <label>Date of reservation:</label>
+     {{input type="date" class="form-control" id="date-input" min="2016-01-01" value=dateReservation}}
+   </div>
+   
 
-      <div class="col-md-2">
-       <label>Note:</label>
-       {{textarea class="form-control" rows="3" id="note" value=note}}
-      </div>
+   <div class="col-md-2">
+     <label>Note:</label>
+     {{textarea class="form-control" rows="3" id="note" value=note}}
+   </div>
 
-     <div class="col-md-2">
+   <div class="col-md-2">
      <label>Restaurant:</label><br>
      {{#link-to "restaurants" model.restaurantId}}
      {{model.name}}
      {{/link-to}}   
-     </div>
-  </div>
+   </div>
+ </div>
 </div>
 
 <div class="col-md-12 complete-button" align="right">  
-   <button href="#" class="btn btn-primary" {{action "complete"}}>Complete Reservation</button>
+ <button href="#" class="btn btn-primary" {{action "complete"}}>Complete Reservation</button>
 </div>
 
 </div>

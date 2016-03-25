@@ -4,16 +4,16 @@ export default Ember.Service.extend({
  
  reservation: Ember.Object.create(),
  
-   setReservation(reserve)
+ setReservation(reserve)
  {   
-    this.get('reservation').setProperties(reserve);
- },
+  this.get('reservation').setProperties(reserve);
+},
 
- getReservation()
- {
-    return this.get('reservation');
- }
+getReservation()
+{
+  return this.get('reservation');
+}
 
- 
-   
+
+
 });

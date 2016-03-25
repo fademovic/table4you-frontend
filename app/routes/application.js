@@ -7,6 +7,7 @@ export default Ember.Route.extend({
   actions: {
     logout: function() {
       this.userService.logout();
+      location.reload();
     },
   }
 

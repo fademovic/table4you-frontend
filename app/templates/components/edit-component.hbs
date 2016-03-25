@@ -1,93 +1,93 @@
 <div class="editForm ">
-   <img id="admin-pic" class="img-rounded" src={{image}} align="left">
-  <div id="inputs" class="row">
+ <img id="admin-pic" class="img-rounded" src={{image}} align="left">
+ <div id="inputs" class="row">
   
   <div class="col-md-2">
-  <label class="label-position">Name</label><br> 
-  <p class="parInline label-position"> {{name}} </p>
+    <label class="label-position">Name</label><br> 
+    <p class="parInline label-position"> {{name}} </p>
   </div>
   
   <div class="col-md-2">
-  <label class="label-position1">Street</label><br> 
-  <p class="parInline label-position1">{{street}} </p>
+    <label class="label-position1">Street</label><br> 
+    <p class="parInline label-position1">{{street}} </p>
   </div>
   
   <div class="col-md-2">
-  <label class="label-position2">City</label><br>
-  <p class="parInline label-position2">{{city}} </p>
+    <label class="label-position2">City</label><br>
+    <p class="parInline label-position2">{{city}} </p>
   </div>
   
   <div class="col-md-2">
-  <label class="label-position3">Working Hours</label><br>
-  <p class="parInline label-position3"> {{hours}}</p>
+    <label class="label-position3">Working Hours</label><br>
+    <p class="parInline label-position3"> {{hours}}</p>
   </div>
- 
+  
   <button class="btn btn-primary btn-primary1" data-toggle="collapse" href= "#{{idColapse}}">Edit</button>
   <button class="btn btn-danger" {{action 'deleteChanges'}}>Delete</button>
+</div>
+<div id={{idColapse}} class="panel-collapse collapse">
+  <div class="panel-body row">
+
+   <div class="col-md-2">
+    <label>Name</label><br>
+    {{input type="text" class="form-control" value=restaurants.name}}
   </div>
-    <div id={{idColapse}} class="panel-collapse collapse">
-        <div class="panel-body row">
 
-         <div class="col-md-2">
-          <label>Name</label><br>
-          {{input type="text" class="form-control" value=restaurants.name}}
-         </div>
+  <div class="col-md-2">
+    <label>Street</label><br>
+    {{input type="text" class="form-control" value=restaurants.address.streetName}}
+  </div>
 
-         <div class="col-md-2">
-          <label>Street</label><br>
-          {{input type="text" class="form-control" value=restaurants.address.streetName}}
-         </div>
+  <div class="col-md-2">
+    <label>City</label><br>
+    {{input type="text" class="form-control" value=restaurants.address.city}}
+  </div>
 
-          <div class="col-md-2">
-          <label>City</label><br>
-          {{input type="text" class="form-control" value=restaurants.address.city}}
-         </div>
+  <div class="col-md-2">
+    <label>Country</label><br>
+    {{input type="text" class="form-control" value=restaurants.address.country}}
+  </div>
 
-         <div class="col-md-2">
-          <label>Country</label><br>
-          {{input type="text" class="form-control" value=restaurants.address.country}}
-         </div>
+  <div class="col-md-2">
+    <label>Hours</label><br>
+    {{input type="text" class="form-control" value=restaurants.workingHours}}
+  </div>
 
-          <div class="col-md-2">
-          <label>Hours</label><br>
-          {{input type="text" class="form-control" value=restaurants.workingHours}}
-         </div>
+  <div class="col-md-2">
+    <label>Phone</label><br>
+    {{input type="text" class="form-control" value=restaurants.phone}}
+  </div>
 
-         <div class="col-md-2">
-          <label>Phone</label><br>
-          {{input type="text" class="form-control" value=restaurants.phone}}
-         </div>
+  <div class="col-md-2">
+    <label>Rating</label><br>
+    {{input type="text" class="form-control" value=restaurants.rating}}
+  </div>
 
-          <div class="col-md-2">
-          <label>Rating</label><br>
-          {{input type="text" class="form-control" value=restaurants.rating}}
-         </div>
+  <div class="col-md-2">
+    <label>Price</label><br>
+    {{input type="text" class="form-control" value=restaurants.reservationPrice}}
+  </div>
 
-         <div class="col-md-2">
-          <label>Price</label><br>
-          {{input type="text" class="form-control" value=restaurants.reservationPrice}}
-         </div>
+  <div class="col-md-2">
+    <label>Deals</label><br>
+    {{input type="text" class="form-control" value=restaurants.deals}}
+  </div>
 
-          <div class="col-md-2">
-          <label>Deals</label><br>
-          {{input type="text" class="form-control" value=restaurants.deals}}
-         </div>
+  <div class="col-md-2">
+    <label>Longitude</label><br>
+    {{input type="text" class="form-control" value=restaurants.coordinates.longitude}}
+  </div>
 
-         <div class="col-md-2">
-          <label>Longitude</label><br>
-          {{input type="text" class="form-control" value=restaurants.coordinates.longitude}}
-         </div>
-
-         <div class="col-md-2">
-          <label>Latitude</label><br>
-          {{input type="text" class="form-control" value=restaurants.coordinates.latitude}}
-         </div>
+  <div class="col-md-2">
+    <label>Latitude</label><br>
+    {{input type="text" class="form-control" value=restaurants.coordinates.latitude}}
+  </div>
   
-           <div class="col-md-2">
-            <button class="btn btn-success" id="save" {{action 'saveChanges'}}>Save changes</button>
-           </div>
-        </div>
+  <div class="col-md-2">
+    <button class="btn btn-success" id="save" {{action 'saveChanges'}}>Save changes</button>
   </div>
+</div>
+</div>
 </div>
 
 {{alert-component text=textC}}

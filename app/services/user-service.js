@@ -20,11 +20,11 @@ export default Base.extend({
  {
    //treba mi nasljedjena iz options
    return this.ajax({
-   method: 'POST',
-   url: '/v1/login',
-   data:JSON.stringify({email:email,password:password}),
-   contentType: "application/json",
-   dataType: 'json',
+     method: 'POST',
+     url: '/v1/login',
+     data:JSON.stringify({email:email,password:password}),
+     contentType: "application/json",
+     dataType: 'json',
    //success: function(data){debugger;} 
  });
  },
@@ -34,23 +34,23 @@ export default Base.extend({
    return this.ajax({
     method: 'GET',
     url: '/v1/getCurrentUser'
-   });
+  });
 
  },
  
  setCurrentUser(user)
  {   
-    this.set('currentUser', user);
- },
+  this.set('currentUser', user);
+},
 
- clearAuthToken()
- {
-   localStorage.removeItem('USER-ACCESS-TOKEN');
- },
+clearAuthToken()
+{
+ localStorage.removeItem('USER-ACCESS-TOKEN');
+},
 
- logout: function() {
-    this.clearAuthToken();
-    this.setCurrentUser(null);
- }
-   
+logout: function() {
+  this.clearAuthToken();
+  this.setCurrentUser(null);
+}
+
 });

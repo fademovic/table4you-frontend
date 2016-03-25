@@ -1,35 +1,35 @@
   
-   {{#validatable-form action="onLogin"}} 
-    <!--forma-->
+{{#validatable-form action="onLogin"}} 
+<!--forma-->
+
+<!--email-->
+<div class="form-group">
+  <label class="control-label">Email</label>
+  {{input type="email" class="form-control"  placeholder="Email" value=mail  required=true}}
+</div>
+
+<!--pass-->
+<div class="form-group">
+  <label class="control-label">Password</label>
+  {{input type="password" class="form-control "  placeholder="Password" value=pass required=true }}
+</div>
+
+<!--footer-->
+<div class="modal-footer">
   
-        <!--email-->
-     <div class="form-group">
-      <label class="control-label">Email</label>
-       {{input type="email" class="form-control"  placeholder="Email" value=mail  required=true}}
-     </div>
+  <div class="col-md-12"> 
+    <button type="submit" class="btn btn-success btn-block">Login</button>
+  </div>
 
-        <!--pass-->
-     <div class="form-group">
-      <label class="control-label">Password</label>
-       {{input type="password" class="form-control "  placeholder="Password" value=pass required=true }}
-     </div>
+  <div class="col-md-12">
+   <a href="#" >Forgot your password?</a>
+ </div>
 
-          <!--footer-->
-   <div class="modal-footer">
-    
-    <div class="col-md-12"> 
-      <button type="submit" class="btn btn-success btn-block">Login</button>
-    </div>
-
-    <div class="col-md-12">
-     <a href="#" >Forgot your password?</a>
-    </div>
-
-   </div>
-
-   {{/validatable-form}}
-
+</div>
  
+{{/validatable-form}}
+
+
 
 {{yield}}
 

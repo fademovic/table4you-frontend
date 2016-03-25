@@ -11,7 +11,7 @@ export default Ember.Component.extend({
     {
       result.push({isFilled: i<= rating}); // isFilled: true ili false ce biti
     }
-     
+    
     return result;
   }.property('rating')
 

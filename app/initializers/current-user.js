@@ -5,9 +5,9 @@ function injectUserService(application, userService) {
   application.register('custom:user-service', userService, { instantiate: false, singleton: true });
 
 
-    application.inject('route','userService', 'custom:user-service');
-    application.inject('component','userService', 'custom:user-service');
-     application.inject('controller','userService', 'custom:user-service');
+  application.inject('route','userService', 'custom:user-service');
+  application.inject('component','userService', 'custom:user-service');
+  application.inject('controller','userService', 'custom:user-service');
 }
 
 export function initialize(application) {
@@ -18,18 +18,18 @@ export function initialize(application) {
     application.deferReadiness();
 
     userService.getCurrentUser()
-      .done(function(response) {
-        userService.setCurrentUser(response);
+    .done(function(response) {
+      userService.setCurrentUser(response);
 
-        injectUserService(application, userService)
-        application.advanceReadiness();
-      })
-      .fail(function() {
-        userService.clearAuthToken();
+      injectUserService(application, userService)
+      application.advanceReadiness();
+    })
+    .fail(function() {
+      userService.clearAuthToken();
 
-        injectUserService(application, userService)
-        application.advanceReadiness();
-      });
+      injectUserService(application, userService)
+      application.advanceReadiness();
+    });
   } else {
     injectUserService(application, userService);
   }
